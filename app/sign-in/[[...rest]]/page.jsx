@@ -1,8 +1,11 @@
 "use client";
 import * as Clerk from "@clerk/elements/common";
 import * as SignIn from "@clerk/elements/sign-in";
+import { useState } from "react";
 
 export default function SignInPage() {
+  const [isOpenAlert, setIsOpenAlert] = useState(false);
+
   return (
     <SignIn.Root>
       <SignIn.Step
@@ -81,7 +84,7 @@ export default function SignInPage() {
         </Clerk.Field>
 
         <SignIn.Action
-          className="relative left w-fit text-sm text-white font-bold border rounded-xl px-3 py-1.5 bg-black hover:bg-black/90 hover:scale-103 transform transition-all duration-200"
+          className="w-fit m-auto text-sm text-white font-bold border rounded-xl px-3 py-1.5 bg-black hover:bg-black/90 hover:scale-103 transform transition-all duration-200"
           submit
         >
           Continue

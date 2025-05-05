@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,12 @@ export default function NavBar() {
           onMouseLeave={handleLeave}
           className="relative flex items-center gap-2 px-4 py-2 font-bold text-lg rounded-md hover:bg-gray-500/5 border border-transparent hover:border-gray-500/10 transition-all duration-300"
         >
-          Menu 🔽
+          Menu
+          <ChevronDown
+            className={`h-5 w-5 transform transition-transform duration-500 ${
+              isOpen ? "rotate-180" : "rotate-0"
+            }`}
+          />
         </button>
         {/* Hover bridge */}
         {isOpen && (

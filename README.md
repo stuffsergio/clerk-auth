@@ -1,6 +1,7 @@
 IMPORTANTE
 
 - .env.local NO se sube a producción (NO deploy)
+  --> las Variables de Entorno se establecen antes del deploy en Vercel
 - hay rutas protegidas, cómo /sign-in y /sign-up
 - 'custom credentials' son credenciales dentro de: Clerk Dashboard -> Configure -> SSO connections -> ⚙
 - en /sign-in/[...rest]/page.jsx:
