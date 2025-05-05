@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { currentUser, auth } from "@clerk/nextjs/dist/types/server";
+import { currentUser, auth } from "@clerk/nextjs/server";
 
 export async function GET() {
     // Usamos auth() para obtener el Id del user
