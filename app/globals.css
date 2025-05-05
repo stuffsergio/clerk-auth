@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: AgathoNarrow;
+  src: url(../public/fonts/AgathoNarrow-Yz3py.woff2) format("woff2");
+}
+@font-face {
+  font-family: CircularBlack;
+  src: url(../public/fonts/circular-black.woff2) format("woff2");
+}
+@font-face {
+  font-family: GaramondBold;
+  src: url(../public/fonts/GaramondBold.woff2) format("woff2");
+}
+@font-face {
+  font-family: GothamMedium;
+  src: url(../public/fonts/Gotham\ Medium.woff2) format("woff2");
+}
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(../public/fonts/HelveticaNeueLTProMd.woff2) format("woff2");
+}
+@font-face {
+  font-family: NeueCorpCondensed;
+  src: url(../public/fonts/PPNeueCorp-CondensedMedium.woff2) format("woff2");
+}
+@font-face {
+  font-family: EditorialSans;
+  src: url(../public/fonts/PPEditorialSans-Medium.woff2) format("woff2");
+}
+@font-face {
+  font-family: NeueCorpNormal;
+  src: url(../public/fonts/PPNeueCorp-NormalMedium.woff2) format("woff2");
+}
+@font-face {
+  font-family: NikkeiJournal;
+  src: url(../public/fonts/PPNikkeiJournal-Regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: NikkeiMaru;
+  src: url(../public/fonts/PPNikkeiMaru-Regular.woff2) format("woff2");
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+span,
+button {
+  font-family: NeueCorpNormal;
+}
+
+a {
+  font-family: GaramondBold;
+}
+
+h1,
+button,
+label,
+input,
+#mensajeAdvert {
+  font-family: HelveticaNeue;
+}
