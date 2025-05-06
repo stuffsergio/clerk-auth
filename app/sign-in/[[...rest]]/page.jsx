@@ -16,7 +16,7 @@ export default function SignInPage() {
         <div className="flex flex-row-reverse justify-center gap-4">
           <Clerk.Connection
             name="google"
-            className="w-fit flex items-center justify-center px-2 py-1 gap-1.5 rounded-full border border-[#360000]"
+            className="w-fit flex items-center justify-center px-2 py-1 gap-1.5 rounded-full border border-[#360000] bg-transparent hover:bg-gray-500/15 transform transition-all duration-200"
           >
             <img
               src="/icons/icon-google.svg"
@@ -27,7 +27,7 @@ export default function SignInPage() {
           </Clerk.Connection>
           <Clerk.Connection
             name="github"
-            className="w-fit flex items-center justify-center px-2 py-1 gap-1.5 rounded-full border border-[#360000]"
+            className="w-fit flex items-center justify-center px-2 py-1 gap-1.5 rounded-full border border-[#360000] bg-transparent hover:bg-gray-500/15 transform transition-all duration-200"
           >
             <img
               src="/icons/github-mark.svg"
@@ -43,7 +43,11 @@ export default function SignInPage() {
           name="identifier"
         >
           <Clerk.Label className="p-2 text-md font-bold">Email</Clerk.Label>
-          <Clerk.Input className="px-2 py-1 text-sm rounded-lg border border-sky-500 focus:outline-none group-hover:bg-sky-500/10 transform transition-all duration-300" />
+          <Clerk.Input
+            autoComplete="off"
+            autoCorrect="off"
+            className="px-2 py-1 text-sm rounded-lg border border-sky-500 focus:outline-none group-hover:bg-sky-500/10 transform transition-all duration-300"
+          />
           <Clerk.FieldError>
             {({ message }) => {
               let customMessage;

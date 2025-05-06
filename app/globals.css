@@ -47,18 +47,17 @@
 }
 
 span,
-button {
+button,
+h3 {
   font-family: NeueCorpNormal;
 }
 
-a {
-  font-family: GaramondBold;
-}
-
 h1,
-button,
+a,
 label,
 input,
-#mensajeAdvert {
+#mensajeAdvert,
+strong,
+p {
   font-family: HelveticaNeue;
 }

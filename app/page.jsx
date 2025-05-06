@@ -12,9 +12,6 @@ import NavBar from "./components/NavBar";
 import UserHome from "./components/UserHome";
 
 export default async function Home() {
-  const { userId } = await auth();
-  const user = await currentUser();
-
   return (
     <div>
       <SignedOut>
