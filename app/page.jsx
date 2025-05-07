@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { auth, currentUser } from "@clerk/nextjs/server";
 import {
   UserButton,
   SignInButton,

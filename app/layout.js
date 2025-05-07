@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     >
       <html lang="en">
           <body>
-            <div className="z-0 sticky bottom-0 left-0 right-0 top-0 bg-[radial-gradient(#0000001a_1px,#f8fafc_1px)] bg-[size:16px_16px] [mask-image:radial-gradient(circle_80%_at_50%_50%,#000_70%,transparent_75%)]">
+            <div className="z-0 min-h-screen bg-[radial-gradient(#0000001a_1px,#f8fafc_1px)] bg-[size:16px_16px] [mask-image:radial-gradient(circle_80%_at_50%_50%,#000_70%,transparent_75%)]">
               {children}
             </div>
           </body>
