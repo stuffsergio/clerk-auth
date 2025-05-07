@@ -1,10 +1,4 @@
-import {
-  UserButton,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-} from "@clerk/nextjs";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import WelcomeUser from "./components/WelcomeUser";
 import NavBar from "./components/NavBar";
 import UserHome from "./components/UserHome";
