@@ -42,10 +42,7 @@ export default function WelcomeUser() {
           alt="aesthetic room"
           className="w-full h-auto"
         />
-        <h1
-          id="ntp"
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 font-bold text-[#360000] text-center md:text-6xl sm:text-2xl px-4 py-2"
-        >
+        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 font-bold text-[#360000] text-center md:text-6xl sm:text-2xl px-4 py-2">
           New Timeless Project
         </h1>
       </div>

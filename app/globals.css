@@ -46,6 +46,10 @@
   --foreground: #171717;
 }
 
+#ntp {
+  font-family: HelveticaNeue;
+}
+
 span,
 button,
 h3 {
