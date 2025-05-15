@@ -21,12 +21,12 @@ export default function RegisterNav() {
         onMouseLeave={handleLeave}
         className="relative flex items-center gap-2 px-4 py-2 font-bold text-lg rounded-md hover:bg-gray-500/5 border border-transparent hover:border-gray-500/10 transition-all duration-300"
       >
-        <User />
+        <User className="md:w-6 sm:w-6 w-5 md:h-6 sm:h-6 h-5" />
       </button>
       {/* Hover bridge */}
       {isOpen && (
         <div
-          className="absolute left-0 h-4 bg-transparent"
+          className="absolute right-0 h-4 bg-transparent"
           style={{ top: "100%" }}
         />
       )}

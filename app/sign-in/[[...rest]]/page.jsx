@@ -36,7 +36,7 @@ export default function SignInPage() {
                   className="w-fit flex items-center justify-center px-3 py-1.5 gap-1.5 rounded-xl border border-[#360000] bg-transparent hover:bg-gray-500/15 transform transition-all duration-200"
                 >
                   <img
-                    src="/icons/github-mark.svg"
+                    src="/icons/icon-github.svg"
                     alt="GitHub Icon"
                     className="w-5 h-5"
                   />

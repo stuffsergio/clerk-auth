@@ -33,19 +33,60 @@ export default function WelcomeUser() {
       img: "diego",
     },
   ];
+  const company = [{ svg: "google" }, { svg: "github" }, { svg: "airbnb" }];
 
   return (
-    <div className="pb-100">
-      <div className="relative inline-block mb-15">
-        <img
-          src="/roomtonosClaros.png"
-          alt="aesthetic room"
-          className="w-full h-auto"
-        />
-        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 font-bold text-[#360000] text-center md:text-6xl sm:text-2xl px-4 py-2">
-          New Timeless Project
-        </h1>
-      </div>
+    <div className="pb-100 pt-15">
+      <section className="flex flex-col gap-5 md:flex-row justify-center items-center px-5 pb-20">
+        <div className="h-full flex flex-col w-full md:w-1/2 px-20 lg md:py-18 sm:py-10 py-5 justify-center gap-5 rounded-xl bg-black">
+          <aside className="flex flex-row items-center md:gap-3 sm:gap-2 gap-1">
+            <div className="flex flex-row">
+              {company.map((company, index) => (
+                <div
+                  className="relative border border-white rounded-full bg-white md:p-1 p-0.5"
+                  key={index}
+                >
+                  <img
+                    src={`/icons/icon-${company.svg}.svg`}
+                    alt="company Icon"
+                    className="w-4 h-4 rounded-xl"
+                  />
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-white/80">1200+ users</p>
+          </aside>
+          <h1 className="text-3xl text-white">Title/Heading</h1>
+          <p className="text-sm text-white/80">
+            Adéntrate en un mundo donde el diseño se encuentra con la
+            innovación. Nuestro último proyecto combina una estética atemporal
+            con tecnología de vanguardia para crear una experiencia única.
+          </p>
+          <aside className="text-white text-sm flex flex-row items-center gap-4">
+            <SignInButton
+              mode="redirect"
+              routing="path"
+              className="cursor-pointer border rounded-xl px-2 py-1 flex items-center justify-center hover:bg-white/90 hover:text-black/90"
+            >
+              Iniciar sesión
+            </SignInButton>
+            <button>
+              <a href="#">Newsletter</a>
+            </button>
+          </aside>
+        </div>
+        <div className="relative w-full md:w-1/2">
+          <img
+            src="/roomtonosClaros.png"
+            alt="aesthetic room"
+            className="rounded-xl"
+          />
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 font-bold text-[#360000] text-center md:text-xl sm:text-lg">
+            New Timeless Project
+          </h1>
+        </div>
+      </section>
+
       <section className="flex flex-col md:flex-row justify-center mx-4 md:mx-20">
         <div className="flex flex-col gap-3 w-full md:w-1/2 px-4 md:pl-20 mb-8 md:mb-0">
           <h3 className="text-md font-bold">Latests scripts</h3>
