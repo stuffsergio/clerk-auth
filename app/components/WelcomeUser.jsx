@@ -38,7 +38,7 @@ export default function WelcomeUser() {
   return (
     <div className="pb-100 pt-15">
       <section className="flex flex-col gap-5 md:flex-row justify-center items-center px-5 pb-20">
-        <div className="h-full flex flex-col w-full md:w-1/2 px-20 lg md:py-18 sm:py-10 py-5 justify-center gap-5 rounded-xl bg-black">
+        <div className="h-full flex flex-col w-full md:w-1/2 px-20 lg md:py-18 sm:py-10 py-5 justify-center md:gap-5 sm:gap-3 gap-2 rounded-xl bg-black">
           <aside className="flex flex-row items-center md:gap-3 sm:gap-2 gap-1">
             <div className="flex flex-row">
               {company.map((company, index) => (
@@ -56,8 +56,10 @@ export default function WelcomeUser() {
             </div>
             <p className="text-xs text-white/80">1200+ users</p>
           </aside>
-          <h1 className="text-3xl text-white">Title/Heading</h1>
-          <p className="text-sm text-white/80">
+          <h1 className="md:text-2xl sm:text-xl text-2xl text-white">
+            Title/Heading
+          </h1>
+          <p className="md:text-sm sm:text-xs text-xs text-white/80">
             Adéntrate en un mundo donde el diseño se encuentra con la
             innovación. Nuestro último proyecto combina una estética atemporal
             con tecnología de vanguardia para crear una experiencia única.

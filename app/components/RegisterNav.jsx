@@ -34,18 +34,18 @@ export default function RegisterNav() {
         <div
           onMouseEnter={handleEnter}
           onMouseLeave={handleLeave}
-          className="absolute mt-2 w-40 flex flex-col gap-3 p-6 z-10 rounded-md font-semibold text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6] backdrop-blur-xs"
+          className="absolute mt-2 w-fit flex flex-col items-baseline gap-3 px-3 py-2 z-10 rounded-md font-semibold md:text-sm sm:text-xs text-xs text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6]"
         >
           <SignInButton
             mode="redirect"
             routing="path"
-            className="cursor-pointer"
+            className="cursor-pointer hover:opacity-80 transition-opacity"
           >
-            Iniciar sesión
+            <p>Iniciar sesión</p>
           </SignInButton>
 
-          <SignUpButton className="bg-sky-200 border border-sky-500 rounded-md cursor-pointer">
-            Registrar
+          <SignUpButton className="cursor-pointer hover:opacity-80 transition-opacity">
+            <p>Registrar</p>
           </SignUpButton>
         </div>
       )}

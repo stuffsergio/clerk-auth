@@ -14,7 +14,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="group">
+    <section className="">
       <button
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
@@ -33,9 +33,9 @@ export default function FAQ() {
         <div
           onMouseEnter={handleEnter}
           onMouseLeave={handleLeave}
-          className="absolute mt-2 w-fit flex flex-col gap-3 z-10 rounded-md text-sm font-bold text-[#09360b] opacity-0 group-hover:opacity-100 transition-opacity duration-200 border border-[#699d99] bg-[#e5f6ec] backdrop-blur-xs"
+          className="absolute mt-2 px-2 py-0.5 w-fit flex flex-col gap-3 z-10 rounded-md text-sm font-bold text-[#09360b] border border-[#699d99] bg-[#e5f6ec] backdrop-blur-xs"
         >
-          Preguntas frecuentes
+          <p>Preguntas frecuentes</p>
         </div>
       )}
     </section>
