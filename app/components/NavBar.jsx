@@ -18,7 +18,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="sticky w-[95dvw] m-auto top-5 z-99 rounded-xl bg-white/5 backdrop-blur-xl md:px-20 sm:px-7 sm:5 py-0 flex justify-between items-center">
+    <nav className="sticky w-[95dvw] m-auto md:top-5 top-2 z-99 rounded-xl bg-white/5 backdrop-blur-xl md:px-20 sm:px-7 px-5 py-0 flex justify-between items-center">
       <div>
         <img
           src="/hourglass.webp"
@@ -51,7 +51,7 @@ export default function NavBar() {
             <div
               onMouseEnter={handleEnter}
               onMouseLeave={handleLeave}
-              className="absolute mt-2 w-32 sm:w-40 flex flex-col gap-2 sm:gap-3 p-4 sm:p-6 z-10 rounded-md font-semibold text-xs sm:text-sm text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6] backdrop-blur-xs"
+              className="absolute mt-2 w-fit sm:w-40 flex flex-col gap-2 sm:gap-3 p-4 sm:p-6 z-10 rounded-md font-semibold text-xs sm:text-sm text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6] backdrop-blur-xs"
             >
               <a href="#" className="hover:opacity-80 transition-opacity">
                 Opción 1

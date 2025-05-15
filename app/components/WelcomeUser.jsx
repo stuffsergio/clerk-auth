@@ -40,7 +40,7 @@ export default function WelcomeUser() {
       <section className="flex flex-col gap-5 md:flex-row justify-center items-center px-5 pb-20">
         <div className="h-full flex flex-col w-full md:w-1/2 px-20 lg md:py-18 sm:py-10 py-5 justify-center md:gap-5 sm:gap-3 gap-2 rounded-xl bg-black">
           <aside className="flex flex-row items-center md:gap-3 sm:gap-2 gap-1">
-            <div className="flex flex-row">
+            <div className="flex flex-row md:gap-1 gap-0.5">
               {company.map((company, index) => (
                 <div
                   className="relative border border-white rounded-full bg-white md:p-1 p-0.5"
@@ -59,11 +59,16 @@ export default function WelcomeUser() {
           <h1 className="md:text-2xl sm:text-xl text-2xl text-white">
             Title/Heading
           </h1>
-          <p className="md:text-sm sm:text-xs text-xs text-white/80">
-            Adéntrate en un mundo donde el diseño se encuentra con la
-            innovación. Nuestro último proyecto combina una estética atemporal
-            con tecnología de vanguardia para crear una experiencia única.
-          </p>
+          <div className="flex flex-col">
+            <p className="md:text-sm sm:text-xs text-xs text-white/80">
+              Adéntrate en un mundo donde el diseño se encuentra con la
+              innovación.
+            </p>
+            <p className="md:block sm:block hidden md:text-sm sm:text-xs text-xs text-white/80">
+              Nuestro último proyecto combina una estética atemporal con
+              tecnología de vanguardia para crear una experiencia única.
+            </p>
+          </div>
           <aside className="text-white text-sm flex flex-row items-center gap-4">
             <SignInButton
               mode="redirect"
