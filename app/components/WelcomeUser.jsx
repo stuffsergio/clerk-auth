@@ -36,7 +36,7 @@ export default function WelcomeUser() {
   const company = [{ svg: "google" }, { svg: "github" }, { svg: "airbnb" }];
 
   return (
-    <div className="pb-100 pt-15">
+    <div className="pb-100 md:pt-8 sm:pt-7 pt-5">
       <section className="flex flex-col gap-5 md:flex-row justify-center items-center px-5 pb-20">
         <div className="h-full flex flex-col w-full md:w-1/2 px-20 lg md:py-18 sm:py-10 py-5 justify-center md:gap-5 sm:gap-3 gap-2 rounded-xl bg-black">
           <aside className="flex flex-row items-center md:gap-3 sm:gap-2 gap-1">

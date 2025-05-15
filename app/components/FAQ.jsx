@@ -33,7 +33,7 @@ export default function FAQ() {
         <div
           onMouseEnter={handleEnter}
           onMouseLeave={handleLeave}
-          className="absolute mt-2 px-2 py-0.5 w-fit flex flex-col gap-3 z-10 rounded-md text-sm font-bold text-[#09360b] border border-[#699d99] bg-[#e5f6ec] backdrop-blur-xs"
+          className="absolute md:block sm:hidden hidden mt-2 px-2 py-0.5 w-fit z-10 rounded-md md:text-sm sm:text-xs text-xs font-semibold text-[#09360b] border border-[#699d99] bg-[#e5f6ec] backdrop-blur-xs"
         >
           <p>Preguntas frecuentes</p>
         </div>
