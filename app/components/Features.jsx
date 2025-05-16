@@ -37,7 +37,7 @@ export default function Features() {
         <div
           onMouseEnter={handleEnter2}
           onMouseLeave={handleLeave2}
-          className="absolute mt-2 md:w-25 sm:w-32 w-23 flex flex-col md:gap-2 sm:gap-2 gap-1.5 px-2 py-1 z-10 rounded-md font-semibold md:text-sm sm:text-xs text-xs text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6]"
+          className="absolute mt-2 md:w-25 sm:w-32 w-23 flex flex-col md:gap-2 sm:gap-2 gap-1.5 md:px-4 md:py-2 sm:px-3 sm:py-1 px-2 py-1 z-10 rounded-md font-semibold md:text-sm sm:text-xs text-xs text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6]"
         >
           <a href="#" className="hover:opacity-80 transition-opacity">
             Opción 1

@@ -1,4 +1,5 @@
 import { UserButton, SignInButton, SignUpButton } from "@clerk/nextjs";
+import { User } from "lucide-react";
 
 export default function WelcomeUser() {
   const users = [
@@ -39,7 +40,7 @@ export default function WelcomeUser() {
     <div className="pb-100 md:pt-8 sm:pt-7 pt-5">
       <section className="flex flex-col gap-5 md:flex-row justify-center items-center px-5 pb-20">
         <div className="h-full flex flex-col w-full md:w-1/2 px-20 lg md:py-18 sm:py-10 py-5 justify-center md:gap-5 sm:gap-3 gap-2 rounded-xl bg-black">
-          <aside className="flex flex-row items-center md:gap-3 sm:gap-2 gap-1">
+          <aside className="flex flex-row items-center md:gap-4 sm:gap-2 gap-1">
             <div className="flex flex-row md:gap-1 gap-0.5">
               {company.map((company, index) => (
                 <div
@@ -73,12 +74,15 @@ export default function WelcomeUser() {
             <SignInButton
               mode="redirect"
               routing="path"
-              className="cursor-pointer border rounded-xl px-2 py-1 flex items-center justify-center hover:bg-white/90 hover:text-black/90"
+              className="cursor-pointer rounded-xl px-2 py-1 flex items-center justify-center text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6]"
             >
-              Iniciar sesión
+              <aside className="flex flex-row gap-3">
+                <strong>Entrar</strong>
+                <User className="md:w-5 md:h-5 sm:w-4 sm:h-4 w-3 h-3" />
+              </aside>
             </SignInButton>
             <button>
-              <a href="#">Newsletter</a>
+              <a href="#">Pricing</a>
             </button>
           </aside>
         </div>
