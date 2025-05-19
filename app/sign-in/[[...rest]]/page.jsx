@@ -154,7 +154,7 @@ export default function SignInPage() {
                         customMessage = "Contraseña incorrecta";
                       } else if (message?.includes("Enter password.")) {
                         customMessage = "Introduzca su contraseña";
-                      } else if (message.lenght() == 0) {
+                      } else if (message.length() == 0) {
                         customMessage = "Introduzca su contraseña";
                       }
 

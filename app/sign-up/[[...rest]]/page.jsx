@@ -91,7 +91,23 @@ export default function SignUpPage() {
             <SignUp.Strategy name="email_code">
               <div className="flex flex-col justify-center items-center md:gap-1 gap-0.5">
                 <h1 className="text-lg">Revisa tu correo</h1>
-                <p className="text-xs text-black/90">Puede estar en spam</p>
+                <div className="relative flex flex-row gap-1 items-center justify-center text-red-600">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 flex-shrink-0 cursor-pointer"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 9v2m0 4h.01M12 5a7 7 0 100 14 7 7 0 000-14z"
+                    />
+                  </svg>
+                  <p className="text-xs text-red-600">Puede estar en spam</p>
+                </div>
               </div>
 
               <Clerk.Field className="flex flex-row items-center" name="code">
@@ -103,7 +119,45 @@ export default function SignUpPage() {
                   autoCorrect="off"
                   className="px-2 py-1 text-sm rounded-xl border border-sky-500 focus:outline-none hover:bg-sky-500/10 transition-all duration-300"
                 />
-                <Clerk.FieldError />
+                <Clerk.FieldError>
+                  {({ message }) => {
+                    let customMessage;
+
+                    if (
+                      message?.includes(
+                        "Password is incorrect. Try again, or use another method."
+                      )
+                    ) {
+                      customMessage = "Contraseña incorrecta";
+                    } else if (message?.includes("Enter password.")) {
+                      customMessage = "Introduzca su contraseña";
+                    } else if (message.length() == 0) {
+                      customMessage = "Introduzca su contraseña";
+                    }
+
+                    return (
+                      <div className="relative ml-2 w-fit text-red-600 group">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5 flex-shrink-0 cursor-pointer"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 9v2m0 4h.01M12 5a7 7 0 100 14 7 7 0 000-14z"
+                          />
+                        </svg>
+                        <span className="absolute left-6 top-1/2 -translate-y-1/2 whitespace-nowrap rounded bg-red-100 px-2 py-1 text-xs text-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+                          {customMessage}
+                        </span>
+                      </div>
+                    );
+                  }}
+                </Clerk.FieldError>
               </Clerk.Field>
 
               <SignUp.Action
