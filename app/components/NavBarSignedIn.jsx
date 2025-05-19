@@ -77,7 +77,12 @@ export default function NavBarSignedIn() {
         </div>
       </div>
       <div>
-        <Link href="/cart" className="text-blue-600 font-medium">
+        <Link
+          href="/cart"
+          className={`font-medium ${
+            cart.length > 0 ? "text-blue-600" : "text-black"
+          }`}
+        >
           Carrito ({cart.length})
         </Link>
       </div>

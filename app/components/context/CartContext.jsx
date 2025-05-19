@@ -1,5 +1,6 @@
 "use client";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { toast } from "react-hot-toast";
 
 const CartContext =
   createContext(); /* Crea el 'contexto global del carrito', es como una caja 
@@ -8,9 +9,39 @@ const CartContext =
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]); // [] el estado del carrito está vacío
 
+  // ⬇ Cargar carrito desde localStorage al montar el componente
+  // - solo se ejecuta una vez al principio
+  // - lee el carrito desde localStorage
+  // - si encuentra algo, lo convierte de texto (JSON.parse) a array y lo carga
+  useEffect(() => {
+    const storedCart = localStorage.getItem("cart");
+    if (storedCart) {
+      setCart(JSON.parse(storedCart));
+    }
+  }, []);
+
+  // ⬆ Guardar carrito en localStorage cada vez que cambie
+  // - se ejecuta cada vez que el carrito cambia (se hace gracias a esto -> [cart], ya que lee el cambio de estado useState)
+  // - guarda el array como texto en localStorage
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
   // Añade un producto al carrito
   const addToCart = (product) => {
     setCart((prev) => [...prev, product]); // prev: conserva lo que ya estaba
+    toast.success(`${product.nombre} añadido al carrito 🛒`, {
+      style: {
+        borderRadius: "100px",
+        background: "#000",
+        color: "#fff",
+        fontSize: "12px",
+        fontFamily: "sans-serif",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      },
+    });
   };
 
   // Elimina un producto del carrito

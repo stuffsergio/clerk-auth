@@ -4,8 +4,8 @@ import Items from "./Items";
 export default async function UserHome() {
   return (
     <div className="">
-      <div className="relative top-5 pb-100">
-        <aside className="right-1/2 bottom-1/2 pb-20">
+      <div className="relative flex flex-col justify-center items-center top-5 pb-100">
+        <aside className="pb-20">
           <StateMood />
         </aside>
         <Items />
