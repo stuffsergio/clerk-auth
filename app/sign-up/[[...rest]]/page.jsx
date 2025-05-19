@@ -10,14 +10,16 @@ export default function SignUpPage() {
         <SignUp.Root redirectUrl="/">
           <SignUp.Step
             name="start"
-            className="relative w-fit min-h-[60vh] min-w-[3dvw] md:min-w-[25dvw] flex flex-col gap-2 px-8 py-6 border rounded-3xl border-[#360000]"
+            className="relative w-fit min-h-[60vh] min-w-[3dvw] md:min-w-[25dvw] flex flex-col gap-6 px-8 py-10 border rounded-3xl border-[#360000]"
           >
-            <h1 className="w-fit m-auto px-5 py-2 text-white bg-black text-xl font-bold rounded-xl">
-              Crea tu cuenta
-            </h1>
-            <p className="text-xs text-black/90">
-              Sin pagos. Puedes cancelar cuando desees.
-            </p>
+            <div className="flex flex-col justify-center items-center gap-2">
+              <h1 className="w-fit m-auto mb-2 px-5 py-2 text-white bg-black text-xl font-bold rounded-xl">
+                Crea tu cuenta
+              </h1>
+              <p className="text-xs text-black/90">
+                Sin pagos. Puedes cancelar cuando desees.
+              </p>
+            </div>
             <div className="flex flex-row-reverse justify-center gap-4">
               <Clerk.Connection
                 name="google"
@@ -42,36 +44,37 @@ export default function SignUpPage() {
                 <span className="text-sm">GitHub</span>
               </Clerk.Connection>
             </div>
+            <div className="flex flex-col md:gap-3 sm:gap-2 gap-2 justify-center items-center">
+              <Clerk.Field name="username">
+                <Clerk.Label className="mr-3">Username</Clerk.Label>
+                <Clerk.Input
+                  autoComplete="off"
+                  autoCorrect="off"
+                  className="px-2 py-1 text-sm rounded-xl border border-sky-500 focus:outline-none hover:bg-sky-500/10 transition-all duration-300"
+                />
+                <Clerk.FieldError />
+              </Clerk.Field>
 
-            <Clerk.Field name="username">
-              <Clerk.Label className="mr-3">Username</Clerk.Label>
-              <Clerk.Input
-                autoComplete="off"
-                autoCorrect="off"
-                className="px-2 py-1 text-sm rounded-xl border border-sky-500 focus:outline-none hover:bg-sky-500/10 transition-all duration-300"
-              />
-              <Clerk.FieldError />
-            </Clerk.Field>
+              <Clerk.Field name="emailAddress">
+                <Clerk.Label className="mr-12">Email</Clerk.Label>
+                <Clerk.Input
+                  autoComplete="off"
+                  autoCorrect="off"
+                  className="px-2 py-1 text-sm rounded-xl border border-sky-500 focus:outline-none hover:bg-sky-500/10 transition-all duration-300"
+                />
+                <Clerk.FieldError />
+              </Clerk.Field>
 
-            <Clerk.Field name="emailAddress">
-              <Clerk.Label className="mr-12">Email</Clerk.Label>
-              <Clerk.Input
-                autoComplete="off"
-                autoCorrect="off"
-                className="px-2 py-1 text-sm rounded-xl border border-sky-500 focus:outline-none hover:bg-sky-500/10 transition-all duration-300"
-              />
-              <Clerk.FieldError />
-            </Clerk.Field>
-
-            <Clerk.Field name="password">
-              <Clerk.Label className="mr-4">Password</Clerk.Label>
-              <Clerk.Input
-                autoComplete="off"
-                autoCorrect="off"
-                className="px-2 py-1 text-sm rounded-xl border border-sky-500 focus:outline-none hover:bg-sky-500/10 transition-all duration-300"
-              />
-              <Clerk.FieldError />
-            </Clerk.Field>
+              <Clerk.Field name="password">
+                <Clerk.Label className="mr-4">Password</Clerk.Label>
+                <Clerk.Input
+                  autoComplete="off"
+                  autoCorrect="off"
+                  className="px-2 py-1 text-sm rounded-xl border border-sky-500 focus:outline-none hover:bg-sky-500/10 transition-all duration-300"
+                />
+                <Clerk.FieldError />
+              </Clerk.Field>
+            </div>
 
             <SignUp.Action
               className="w-fit m-auto text-sm text-lime-950 bg-lime-300/50 border rounded-xl border-lime-700 font-bold  px-3 py-1.5  hover:scale-103 transform transition-all duration-200"
