@@ -1,8 +1,10 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import WelcomeUser from "./components/WelcomeUser";
 import NavBar from "./components/NavBar";
+import NavBarSignedIn from "./components/NavBarSignedIn";
 import UserHome from "./components/UserHome";
-import HabitTracker from "./components/C";
+import UserCard from "./components/UserCard";
+import { CartProvider } from "./components/context/CartContext";
 
 export default async function Home() {
   return (
@@ -13,9 +15,9 @@ export default async function Home() {
       </SignedOut>
 
       <SignedIn>
-        <NavBar />
+        <NavBarSignedIn />
         <UserHome />
-        <HabitTracker />
+        <UserCard />
       </SignedIn>
     </div>
   );
