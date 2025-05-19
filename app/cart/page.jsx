@@ -17,7 +17,7 @@ export default function Cart() {
               className="flex flex-row items-center gap-4 p-4 rounded-lg border border-gray-300 bg-white shadow-sm"
             >
               <img
-                src={item.imagen}
+                src={`/images/${item.imagen}`}
                 alt={item.nombre}
                 className="w-24 h-24 object-contain"
               />
