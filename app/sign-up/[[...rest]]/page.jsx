@@ -172,7 +172,7 @@ export default function SignUpPage() {
       </section>
       <section className="hidden md:block">
         <img
-          src="/final_(thisStuffIsCrazy)habítulo.jpg"
+          src="/images/final_(thisStuffIsCrazy)habítulo.webp"
           alt="edificio arquitectura"
           className="w-full h-full object-cover"
         />

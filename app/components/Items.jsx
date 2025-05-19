@@ -8,22 +8,22 @@ export default function Items() {
     {
       id: 1,
       nombre: "Puffy Inflatable",
-      imagen: "/puffy-inflatable.png",
+      imagen: "/puffy-inflatable.webp",
     },
     {
       id: 2,
       nombre: "Glosse Brain",
-      imagen: "/glossy-brain.png",
+      imagen: "/glossy-brain.webp",
     },
     {
       id: 3,
       nombre: "Textured Book",
-      imagen: "/textured-book.png",
+      imagen: "/textured-book.webp",
     },
     {
       id: 4,
       nombre: "Abstract Liquid",
-      imagen: "abstract-liquid.png",
+      imagen: "abstract-liquid.webp",
     },
   ];
 
@@ -36,7 +36,7 @@ export default function Items() {
         >
           <div className="w-[22dvw] hover:border border-[#360000] rounded-xl flex items-center justify-center transition-all transform duration-150">
             <img
-              src={producto.imagen}
+              src={`/images/${producto.imagen}`}
               alt={producto.nombre}
               className="w-[20dvw] h-auto"
             />

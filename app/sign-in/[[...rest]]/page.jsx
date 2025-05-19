@@ -2,6 +2,7 @@
 
 import * as Clerk from "@clerk/elements/common";
 import * as SignIn from "@clerk/elements/sign-in";
+import { Undo2, ArrowRight } from "lucide-react";
 
 export default function SignInPage() {
   return (
@@ -111,19 +112,16 @@ export default function SignInPage() {
                 className="w-fit m-auto text-sm text-lime-950 bg-lime-300/50 border rounded-xl border-lime-700 font-bold  px-3 py-1.5  hover:scale-103 transform transition-all duration-200"
                 submit
               >
-                Continue
+                Continuar
               </SignIn.Action>
             </SignIn.Step>
 
             <SignIn.Step
               name="verifications"
-              className="relative w-fit min-h-[60vh] min-w-[25dvw] flex flex-col gap-2 px-8 py-6 border rounded-3xl border-[#360000]"
+              className="relative w-fit min-h-[30vh] min-w-[3dvw] md:min-w-[25dvw] flex flex-col md:gap-5 gap-4 px-8 py-6 border rounded-3xl border-[#360000]"
             >
               <SignIn.Strategy name="password">
-                <h1
-                  id="ntp"
-                  className="w-fit m-auto px-5 py-2 text-white bg-black text-xl font-bold rounded-xl"
-                >
+                <h1 className="w-fit m-auto px-5 py-2 text-white bg-black text-xl font-bold rounded-xl">
                   NewTimeless
                 </h1>
                 <h1 className="w-fit m-auto px-2 py-2">
@@ -184,10 +182,10 @@ export default function SignInPage() {
                 </Clerk.Field>
 
                 <SignIn.Action
-                  className="w-fit m-auto text-sm text-lime-950 bg-lime-300/50 border rounded-xl border-lime-700 font-bold  px-3 py-1.5  hover:scale-103 transform transition-all duration-200"
+                  className="w-fit m-auto text-sm text-lime-950 bg-lime-300/50 border rounded-xl border-lime-700 font-bold px-3 py-1.5 hover:scale-103 transform transition-all duration-200"
                   submit
                 >
-                  Continue
+                  Continuar
                 </SignIn.Action>
                 <SignIn.Action navigate="forgot-password">
                   <p className="text-right text-xs text-black w-fit rounded-full px-2 py-0.5 hover:text-red-950 hover:border hover:border-[#c90c1f] hover:bg-[#ff9ca6]">
@@ -197,54 +195,110 @@ export default function SignInPage() {
               </SignIn.Strategy>
 
               <SignIn.Strategy name="reset_password_email_code">
-                <h1>Check your email</h1>
-                <p>
-                  We sent a code to <SignIn.SafeIdentifier />.
-                </p>
+                <h1 className="w-fit m-auto px-5 py-2 text-black text-md font-bold rounded-xl">
+                  Revisa tu bandeja de entrada
+                </h1>
+                <div className="flex flex-col gap-1">
+                  <p className="text-black/90 text-sm">
+                    El código debe estar en
+                  </p>
+                  <span className="md:text-sm sm:text-xs text-xs bg-blue-200 px-2 py-0.5 rounded-lg text-blue-600">
+                    <SignIn.SafeIdentifier />.
+                  </span>
+                </div>
 
                 <Clerk.Field name="code">
-                  <Clerk.Label>Email code</Clerk.Label>
-                  <Clerk.Input />
+                  <Clerk.Label className="p-2 text-md font-bold">
+                    Código
+                  </Clerk.Label>
+                  <Clerk.Input
+                    autoComplete="off"
+                    autoCorrect="off"
+                    className="w-fit px-2 py-1 text-sm rounded-lg border border-sky-500 focus:outline-none hover:bg-sky-500/10 transition-all duration-300"
+                  />
                   <Clerk.FieldError />
                 </Clerk.Field>
 
-                <SignIn.Action submit>Continue</SignIn.Action>
+                <SignIn.Action
+                  className="w-fit m-auto text-sm text-lime-950 bg-lime-300/50 border rounded-xl border-lime-700 font-bold px-3 py-1.5 hover:scale-103 transform transition-all duration-200"
+                  submit
+                >
+                  Continuar
+                </SignIn.Action>
               </SignIn.Strategy>
             </SignIn.Step>
 
-            <SignIn.Step name="forgot-password">
-              <h1>Forgot your password?</h1>
+            <SignIn.Step
+              className="relative w-fit min-h-[30vh] min-w-[3dvw] md:min-w-[25dvw] flex flex-col justify-center items-center md:gap-5 gap-4 px-8 py-6 border rounded-3xl border-[#360000]"
+              name="forgot-password"
+            >
+              <h1 className="w-fit m-auto px-5 py-2 text-black text-md font-bold rounded-xl">
+                ¿Olvidaste tu contraseña?
+              </h1>
 
               <SignIn.SupportedStrategy name="reset_password_email_code">
-                Reset password
+                <div className="group flex flex-row gap-2 items-center justify-center bg-lime-300/50 border rounded-xl border-lime-700 px-3 py-1.5 hover:scale-103 transform transition-all duration-200">
+                  <p className="w-fit m-auto text-sm text-lime-950 font-bold">
+                    Reemplazar contraseña
+                  </p>
+                  <ArrowRight className="w-5 h-5 text-green-950 group-hover:translate-x-2 transition-all transform duration-200" />
+                </div>
               </SignIn.SupportedStrategy>
 
-              <SignIn.Action navigate="previous">Go back</SignIn.Action>
+              <SignIn.Action
+                className="w-fit border border-[#c90c1f] bg-[#ff9ca6] rounded-full p-1.5"
+                navigate="previous"
+              >
+                <Undo2 className="w-4 h-4 text-red-950" />
+              </SignIn.Action>
             </SignIn.Step>
 
-            <SignIn.Step name="reset-password">
-              <h1>Reset your password</h1>
+            <SignIn.Step
+              className="relative w-fit min-h-[30vh] min-w-[3dvw] md:min-w-[25dvw] flex flex-col md:gap-5 gap-4 px-8 py-6 border rounded-3xl border-[#360000]"
+              name="reset-password"
+            >
+              <h1 className="w-fit m-auto px-5 py-2 text-black text-md font-bold rounded-xl">
+                Reemplaza tu contraseña
+              </h1>
+              <div className="flex flex-col gap-2 items-center justify-center">
+                <Clerk.Field name="password">
+                  <Clerk.Label className="p-2 text-sm font-bold text-black/90">
+                    Nueva
+                  </Clerk.Label>
+                  <Clerk.Input
+                    autoComplete="off"
+                    autoCorrect="off"
+                    className="px-2 py-1 text-sm rounded-lg border border-sky-500 focus:outline-none hover:bg-sky-500/10 transition-all duration-300"
+                  />
+                  <Clerk.FieldError />
+                </Clerk.Field>
 
-              <Clerk.Field name="password">
-                <Clerk.Label>New password</Clerk.Label>
-                <Clerk.Input />
-                <Clerk.FieldError />
-              </Clerk.Field>
+                <Clerk.Field name="confirmPassword">
+                  <Clerk.Label className="p-2 text-sm font-bold text-black/90">
+                    Repite
+                  </Clerk.Label>
+                  <Clerk.Input
+                    autoComplete="off"
+                    autoCorrect="off"
+                    className="px-2 py-1 text-sm rounded-lg border border-sky-500 focus:outline-none hover:bg-sky-500/10 transition-all duration-300"
+                  />
+                  <Clerk.FieldError />
+                </Clerk.Field>
+              </div>
 
-              <Clerk.Field name="confirmPassword">
-                <Clerk.Label>Confirm password</Clerk.Label>
-                <Clerk.Input />
-                <Clerk.FieldError />
-              </Clerk.Field>
-
-              <SignIn.Action submit>Reset password</SignIn.Action>
+              <SignIn.Action
+                className="w-fit m-auto text-sm text-lime-950 bg-lime-300/50 border rounded-xl border-lime-700 font-bold px-3 py-1.5 hover:scale-103 transform transition-all duration-200"
+                submit
+              >
+                Confirmar
+              </SignIn.Action>
             </SignIn.Step>
           </div>
         </SignIn.Root>
       </section>
       <section className="hidden md:block">
         <img
-          src="/final_(thisStuffIsCrazy)habítulo.jpg"
+          src="/images/final_(thisStuffIsCrazy)habítulo.webp"
           alt="edificio arquitectura"
           className="w-full h-full object-cover"
         />

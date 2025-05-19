@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import RegisterNav from "./RegisterNav";
 import Features from "./Features";
 import FAQ from "./FAQ";
 import { ChevronDown } from "lucide-react";
@@ -25,7 +24,7 @@ export default function NavBarSignedIn() {
     <nav className="sticky w-[95dvw] m-auto md:top-3 sm:top-2 top-2 z-99 rounded-xl bg-white/5 backdrop-blur-xl md:px-20 sm:px-7 px-5 py-0 flex justify-between items-center">
       <div>
         <img
-          src="/hourglass.webp"
+          src="/images/hourglass.webp"
           alt="reloj de arena"
           className="md:w-8 sm:w-6 w-5 md:h-8 sm:h-6 h-5"
         />

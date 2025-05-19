@@ -88,7 +88,7 @@ export default function WelcomeUser() {
         </div>
         <div className="relative w-full md:w-1/2">
           <img
-            src="/roomtonosClaros.png"
+            src="/images/roomtonosClaros.webp"
             alt="aesthetic room"
             className="rounded-xl"
           />
