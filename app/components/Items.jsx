@@ -49,7 +49,7 @@ export default function Items() {
 
   return (
     <div>
-      <div className="grid md:grid-cols-4 grid-cols-3 gap-3">
+      <div className="grid md:grid-cols-4 grid-cols-3 md:gap-5 sm:gap-10 gap-10">
         {productos.map((producto) => (
           <section
             key={producto.id}
@@ -59,11 +59,13 @@ export default function Items() {
               <img
                 src={`/images/${producto.imagen}`}
                 alt={producto.nombre}
-                className="w-[20dvw] h-auto"
+                className="md:w-[20dvw] sm:w-[26dvw] w-[30dvw] h-auto"
               />
             </div>
             <span className="flex flex-row justify-evenly items-center w-full">
-              <p className="md:text-sm sm:text-xs text-xs">{producto.nombre}</p>
+              <p className="md:text-sm sm:text-xs text-xs font-bold">
+                {producto.nombre}
+              </p>
               <button onClick={() => addToCart(producto)}>
                 <img
                   src="/icons/carrito.png"

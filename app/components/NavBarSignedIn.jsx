@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Features from "./Features";
 import FAQ from "./Pricing";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Globe, HeartPlus, BellPlusIcon } from "lucide-react";
 import Link from "next/link";
 import { useCart } from "./context/CartContext";
 
@@ -54,22 +54,31 @@ export default function NavBarSignedIn() {
             <div
               onMouseEnter={handleEnter}
               onMouseLeave={handleLeave}
-              className="absolute mt-2 md:w-25 sm:w-32 w-23 flex flex-col md:gap-2 sm:gap-2 gap-1.5 md:px-4 md:py-2 sm:px-3 sm:py-1 px-2 py-1 z-10 rounded-md font-semibold md:text-sm sm:text-xs text-xs text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6]"
+              className="absolute mt-2 md:w-45 sm:w-32 w-23 flex flex-col md:gap-2 sm:gap-2 gap-1.5 md:px-4 md:py-2 sm:px-3 sm:py-1 px-2 py-1 z-10 rounded-md font-semibold md:text-sm sm:text-xs text-xs text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6]"
             >
-              <a href="#" className="hover:opacity-80 transition-opacity">
-                Opción 1
-              </a>
-              <a href="#" className="hover:opacity-80 transition-opacity">
-                Opción 2
-              </a>
-              <a href="#" className="hover:opacity-80 transition-opacity">
-                Opción 3
-              </a>
+              <Link
+                href="#"
+                className="flex flex-row gap-2 hover:opacity-80 transition-opacity"
+              >
+                <HeartPlus className="w-5 h-5 text-red-950" />
+                <p>Productos favoritos</p>
+              </Link>
+              <Link
+                href="#"
+                className="flex flex-row gap-2 hover:opacity-80 transition-opacity"
+              >
+                <Globe className="w-5 h-5 text-red-950" />
+                <p>Geolocalización de supermercados</p>
+              </Link>
+              <Link
+                href="#"
+                className="flex flex-row gap-2 hover:opacity-80 transition-opacity"
+              >
+                <BellPlusIcon className="w-5 h-5 text-red-950" />
+                <p>Últimas novedades</p>
+              </Link>
             </div>
           )}
-        </div>
-        <div>
-          <Features />
         </div>
         <div>
           <FAQ />
