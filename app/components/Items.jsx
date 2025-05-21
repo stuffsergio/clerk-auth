@@ -25,34 +25,56 @@ export default function Items() {
       nombre: "Abstract Liquid",
       imagen: "abstract-liquid.webp",
     },
+    {
+      id: 5,
+      nombre: "Brócoli",
+      imagen: "brocoli.webp",
+    },
+    {
+      id: 6,
+      nombre: "Leche",
+      imagen: "leche.webp",
+    },
+    {
+      id: 7,
+      nombre: "Arroz",
+      imagen: "arroz.webp",
+    },
+    {
+      id: 8,
+      nombre: "Smoothies",
+      imagen: "smoothie.webp",
+    },
   ];
 
   return (
-    <div className="w-fit mx-[5dvw] my-5 flex flex-row items-center gap-3">
-      {productos.map((producto) => (
-        <section
-          key={producto.id}
-          className="flex flex-col items-baseline justify-center gap-2"
-        >
-          <div className="w-[22dvw] hover:border border-[#360000] rounded-xl flex items-center justify-center transition-all transform duration-150">
-            <img
-              src={`/images/${producto.imagen}`}
-              alt={producto.nombre}
-              className="w-[20dvw] h-auto"
-            />
-          </div>
-          <span className="flex flex-row justify-evenly items-center w-full">
-            <p className="md:text-sm sm:text-xs text-xs">{producto.nombre}</p>
-            <button onClick={() => addToCart(producto)}>
+    <div>
+      <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3">
+        {productos.map((producto) => (
+          <section
+            key={producto.id}
+            className="flex flex-col items-baseline justify-center gap-2"
+          >
+            <div className="w-[22dvw] hover:border border-[#360000] rounded-xl flex items-center justify-center transition-all transform duration-150">
               <img
-                src="/icons/carrito.png"
-                alt="carrito"
-                className="w-[2.5dvw] h-auto hover:scale-110 transition-transform"
+                src={`/images/${producto.imagen}`}
+                alt={producto.nombre}
+                className="w-[20dvw] h-auto"
               />
-            </button>
-          </span>
-        </section>
-      ))}
+            </div>
+            <span className="flex flex-row justify-evenly items-center w-full">
+              <p className="md:text-sm sm:text-xs text-xs">{producto.nombre}</p>
+              <button onClick={() => addToCart(producto)}>
+                <img
+                  src="/icons/carrito.png"
+                  alt="carrito"
+                  className="w-[2.5dvw] h-auto hover:scale-110 transition-transform"
+                />
+              </button>
+            </span>
+          </section>
+        ))}
+      </div>
     </div>
   );
 }
