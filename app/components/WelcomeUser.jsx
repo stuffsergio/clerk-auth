@@ -1,5 +1,5 @@
 import { UserButton, SignInButton, SignUpButton } from "@clerk/nextjs";
-import { User } from "lucide-react";
+import { ArrowRight, User } from "lucide-react";
 
 export default function WelcomeUser() {
   const users = [
@@ -74,16 +74,13 @@ export default function WelcomeUser() {
             <SignInButton
               mode="redirect"
               routing="path"
-              className="cursor-pointer rounded-xl px-2 py-1 flex items-center justify-center text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6]"
+              className="group cursor-pointer rounded-xl px-3 py-1 flex flex-row gap-1.5 items-center justify-center text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6]"
             >
-              <aside className="flex flex-row gap-3">
-                <strong>Entrar</strong>
-                <User className="md:w-5 md:h-5 sm:w-4 sm:h-4 w-3 h-3" />
+              <aside>
+                <strong className="group-hover:opacity-85">Entrar</strong>
+                <ArrowRight className="group-hover:translate-x-1.5 transition-all transform duration-150 md:w-5 md:h-5 sm:w-4 sm:h-4 w-3 h-3" />
               </aside>
             </SignInButton>
-            <button>
-              <a href="#">Pricing</a>
-            </button>
           </aside>
         </div>
         <div className="relative w-full md:w-1/2">

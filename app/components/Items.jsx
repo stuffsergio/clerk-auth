@@ -49,7 +49,7 @@ export default function Items() {
 
   return (
     <div>
-      <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3">
+      <div className="grid md:grid-cols-4 grid-cols-3 gap-3">
         {productos.map((producto) => (
           <section
             key={producto.id}

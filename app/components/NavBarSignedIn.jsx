@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Features from "./Features";
-import FAQ from "./FAQ";
+import FAQ from "./Pricing";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useCart } from "./context/CartContext";
@@ -29,7 +29,7 @@ export default function NavBarSignedIn() {
           className="md:w-8 sm:w-6 w-5 md:h-8 sm:h-6 h-5"
         />
       </div>
-      <div className="flex flex-row md:gap-20 sm:gap-7 justify-between items-center">
+      <div className="flex flex-row md:gap-10 sm:gap-5 gap-0 justify-between items-center">
         <div className="relative">
           <button
             onMouseEnter={handleEnter}
@@ -78,7 +78,7 @@ export default function NavBarSignedIn() {
       <div>
         <Link
           href="/cart"
-          className={`font-medium ${
+          className={`md:text-sm sm:text-sm text-xs ${
             cart.length > 0 ? "text-blue-600" : "text-black"
           }`}
         >
