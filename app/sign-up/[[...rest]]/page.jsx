@@ -168,6 +168,18 @@ export default function SignUpPage() {
               </SignUp.Action>
             </SignUp.Strategy>
           </SignUp.Step>
+
+          <SignUp.Step name="missing_fields" className="...">
+            <Clerk.Field name="username">
+              <Clerk.Label>Elige un nombre de usuario</Clerk.Label>
+              <Clerk.Input className="..." />
+              <Clerk.FieldError />
+            </Clerk.Field>
+
+            <SignUp.Action className="..." submit>
+              Continuar
+            </SignUp.Action>
+          </SignUp.Step>
         </SignUp.Root>
       </section>
       <section className="hidden md:block">
