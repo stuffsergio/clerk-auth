@@ -52,12 +52,12 @@
 
 span,
 button,
-h3 {
+h3,
+a {
   font-family: NeueCorpNormal;
 }
 
 h1,
-a,
 label,
 input,
 #mensajeAdvert,

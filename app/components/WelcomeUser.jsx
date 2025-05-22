@@ -57,17 +57,18 @@ export default function WelcomeUser() {
             </div>
             <p className="text-xs text-white/80">1200+ users</p>
           </aside>
-          <h1 className="md:text-2xl sm:text-xl text-2xl text-white">
-            Title/Heading
+          <h1 className="md:text-2xl sm:text-xl text-2xl text-blue-200">
+            LIST SHOP
           </h1>
           <div className="flex flex-col">
             <p className="md:text-sm sm:text-xs text-xs text-white/80">
-              Adéntrate en un mundo donde el diseño se encuentra con la
-              innovación.
+              No compliques la compra, hazlo sencillo y rápido con{" "}
+              <i className="text-blue-200 font-bold tracking-wider">ListShop</i>
+              .
             </p>
             <p className="md:block sm:block hidden md:text-sm sm:text-xs text-xs text-white/80">
-              Nuestro último proyecto combina una estética atemporal con
-              tecnología de vanguardia para crear una experiencia única.
+              Tus alimentos y recursos favoritos al alcance de tu mano, puedes
+              hacerlo ahora mismo.
             </p>
           </div>
           <aside className="text-white text-sm flex flex-row items-center gap-4">
@@ -77,8 +78,8 @@ export default function WelcomeUser() {
               className="group cursor-pointer rounded-xl px-3 py-1 flex flex-row gap-1.5 items-center justify-center text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6]"
             >
               <aside>
-                <strong className="group-hover:opacity-85">Entrar</strong>
-                <ArrowRight className="group-hover:translate-x-1.5 transition-all transform duration-150 md:w-5 md:h-5 sm:w-4 sm:h-4 w-3 h-3" />
+                <strong className="group-hover:opacity-85">Probar</strong>
+                <ArrowRight className="group-hover:translate-x-1.5 transition-all transform duration-200 md:w-5 md:h-5 sm:w-4 sm:h-4 w-3 h-3" />
               </aside>
             </SignInButton>
           </aside>
