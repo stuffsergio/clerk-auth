@@ -169,7 +169,7 @@ export default function SignUpPage() {
             </SignUp.Strategy>
           </SignUp.Step>
 
-          <SignUp.Step name="missing_fields" className="...">
+          <SignUp.Step name="continue" className="...">
             <Clerk.Field name="username">
               <Clerk.Label>Elige un nombre de usuario</Clerk.Label>
               <Clerk.Input className="..." />
