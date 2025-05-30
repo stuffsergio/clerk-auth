@@ -111,7 +111,7 @@ export default function WelcomeUser() {
                   className="w-8 h-8 p-1.5 rounded-full border"
                 />
                 <div className="flex flex-col">
-                  <strong className="text-sm">
+                  <strong className="text-sm text-[#0D0D0D]">
                     {usuario.nombre} - {usuario.rol}
                   </strong>
                   <p className="text-sm font-light">{usuario.copy}</p>
