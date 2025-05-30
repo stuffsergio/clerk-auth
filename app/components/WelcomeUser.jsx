@@ -72,7 +72,7 @@ export default function WelcomeUser() {
             </p>
           </div>
           <aside className="text-white text-sm flex flex-row items-center gap-4">
-            <SignInButton
+            <SignUpButton
               mode="redirect"
               routing="path"
               className="group cursor-pointer rounded-xl px-3 py-1 flex flex-row gap-1.5 items-center justify-center text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6]"
@@ -81,7 +81,7 @@ export default function WelcomeUser() {
                 <strong className="group-hover:opacity-85">Probar</strong>
                 <ArrowRight className="group-hover:translate-x-1.5 transition-all transform duration-200 md:w-5 md:h-5 sm:w-4 sm:h-4 w-3 h-3" />
               </aside>
-            </SignInButton>
+            </SignUpButton>
           </aside>
         </div>
         <div className="relative w-full md:w-1/2">
