@@ -36,7 +36,7 @@ export default function RegisterNav() {
           <div
             onMouseEnter={handleEnter}
             onMouseLeave={handleLeave}
-            className="md:flex sm:flex flex absolute mt-2 w-fit -translate-x-4 flex-col items-baseline gap-3 px-2 py-2 z-10 rounded-md font-semibold md:text-sm sm:text-xs text-xs text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6]"
+            className="md:flex sm:flex hidden absolute mt-2 w-fit -translate-x-4 flex-col items-baseline gap-3 px-2 py-2 z-10 rounded-md font-semibold md:text-sm sm:text-xs text-xs text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6]"
           >
             <SignInButton
               mode="redirect"
