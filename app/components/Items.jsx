@@ -103,7 +103,7 @@ export default function Items({
               <img
                 src="/icons/carrito.png"
                 alt="carrito"
-                className="md:w-[3dvw] sm:w-[4dvw] w-[5dvw] h-auto hover:scale-110 hover:rotate-5 transform transition-all duration-200"
+                className="md:w-[3dvw] sm:w-[4dvw] w-[6dvw] h-auto hover:scale-110 hover:rotate-5 transform transition-all duration-200"
               />
             </button>
           </span>
