@@ -22,7 +22,7 @@ export default function Features() {
       >
         Features
         <ChevronDown
-          className={`md:block sm:block hidden md:h-5 md:w-5 sm:h-4 sm:w-4 w-4 h-4 transform transition-transform duration-500 ${
+          className={`md:block sm:block block md:h-5 md:w-5 sm:h-4 sm:w-4 w-4 h-4 transform transition-transform duration-500 ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
         />
@@ -44,21 +44,21 @@ export default function Features() {
             href="#"
             className="flex flex-row justify-center items-center gap-2 hover:opacity-80 hover:scale-103 transform transition-all duration-200"
           >
-            <HeartPlus className="md:block sm:block hidden w-5 h-5 text-red-950" />
+            <HeartPlus className="md:block sm:block block w-5 h-5 text-red-950" />
             <p>Productos favoritos</p>
           </Link>
           <Link
             href="/supermercado"
             className="flex flex-row justify-center items-center gap-2 hover:opacity-80 hover:scale-103 transform transition-all duration-200"
           >
-            <Globe className="md:block sm:block hidden md:w-8 md:h-8 sm:w-10 sm:h-10 text-red-950" />
+            <Globe className="md:block sm:block block md:w-8 md:h-8 sm:w-10 sm:h-10 text-red-950" />
             <p>Geolocalización de supermercados</p>
           </Link>
           <Link
             href="#"
             className="flex flex-row justify-center items-center gap-2 hover:opacity-80 hover:scale-103 transform transition-all duration-200"
           >
-            <BellPlusIcon className="md:block sm:block hidden w-5 h-5 text-red-950" />
+            <BellPlusIcon className="md:block sm:block block w-5 h-5 text-red-950" />
             <p>Últimas novedades</p>
           </Link>
         </div>

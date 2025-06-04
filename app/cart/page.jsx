@@ -25,11 +25,11 @@ export default function Cart() {
                 alt={item.nombre}
                 className="w-34 h-34 object-contain"
               />
-              <div className="w-full flex flex-row gap-3 px-3 justify-between">
+              <div className="w-full flex flex-row gap-3 px-3 justify-between items-center">
                 <h4 className="text-gray-900 font-semibold">{item.nombre}</h4>
                 <button
                   onClick={() => removeFromCart(index)}
-                  className="text-sm text-red-600 hover:underline"
+                  className="text-sm border border-red-900 bg-red-300 px-2 py-1 rounded-lg text-red-700 hover:underline"
                 >
                   Quitar
                 </button>
