@@ -47,7 +47,7 @@ export default function Supermercados() {
 
   return (
     <div className="p-10">
-      <h1 className="md:text-2xl text-xl text-center font-bold pb-8">
+      <h1 className="md:text-2xl text-xl text-center font-bold pb-4">
         Supermercados Cercanos
       </h1>
 
@@ -75,14 +75,14 @@ export default function Supermercados() {
                 className="flex md:flex-row flex-col justify-between gap-3 p-4 bg-white rounded-xl shadow-md"
               >
                 <aside className="flex flex-col gap-1 md:w-[80%]">
-                  <h3 className="md:text-xl text-lg font-bold">{place.name}</h3>
+                  <h3 className="md:text-xl text-sm font-bold">{place.name}</h3>
                   <p className="text-gray-700 md:text-sm sm:text-sm text-xs">
                     {place.vicinity}
                   </p>
                   <p className="text-black/85 text-sm">{place.open_now}</p>
                 </aside>
                 {place.rating && (
-                  <p className="text-sm md:text-right text-left text-yellow-600">
+                  <p className="text-sm md:text-right text-left text-yellow-500">
                     ⭐ {place.rating}
                   </p>
                 )}

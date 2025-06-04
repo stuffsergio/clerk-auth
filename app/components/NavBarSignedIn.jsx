@@ -30,7 +30,7 @@ export default function NavBarSignedIn() {
             cart.length > 0 ? "text-blue-600" : "text-black"
           }`}
         >
-          Carrito ({cart.length})
+          Carrito ( {cart.length} )
         </Link>
       </div>
     </nav>

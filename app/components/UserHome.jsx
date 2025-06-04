@@ -9,8 +9,8 @@ export default function UserHome() {
     <div className="">
       <div className="relative flex flex-col justify-center items-center top-5 pb-100">
         <aside className="md:pb-10 pb-6">
-          <div className="w-[90dvw] flex flex-row items-center px-8 py-5 rounded-xl bg-white shadow-lg">
-            <h3 className="md:px-8 sm:px-5 px-3 md:py-2 py-1 md:text-xl sm:text-lg text-xs font-bold text-black">
+          <div className="w-[90dvw] flex flex-row items-center px-4 py-5 rounded-xl bg-white shadow-lg">
+            <h3 className="md:px-6 sm:px-5 px-3 md:py-2 py-1 md:text-xl sm:text-lg text-xs font-bold text-black">
               Añade tus productos al carrito
             </h3>
             <input
