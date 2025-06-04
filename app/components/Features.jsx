@@ -48,7 +48,7 @@ export default function Features() {
             <p>Productos favoritos</p>
           </Link>
           <Link
-            href="#"
+            href="/supermercado"
             className="flex flex-row justify-center items-center gap-2 hover:opacity-80 hover:scale-103 transform transition-all duration-200"
           >
             <Globe className="md:block sm:block hidden md:w-8 md:h-8 sm:w-10 sm:h-10 text-red-950" />
