@@ -7,7 +7,7 @@ import Contacto from "./Contacto";
 
 export default function NavBar() {
   return (
-    <nav className="sticky w-[95dvw] m-auto md:top-3 sm:top-2 top-2 z-99 rounded-xl bg-white/5 backdrop-blur-xl md:px-20 sm:px-7 px-5 py-0 flex justify-between items-center">
+    <nav className="sticky w-[95dvw] m-auto md:top-3 sm:top-2 top-2 z-99 rounded-xl bg-white/5 backdrop-blur-3xl md:px-20 sm:px-7 px-5 py-0 flex justify-evenly items-center">
       <div>
         <img
           src="/images/hourglass.webp"
@@ -15,19 +15,13 @@ export default function NavBar() {
           className="md:w-8 sm:w-6 w-5 md:h-8 sm:h-6 h-5"
         />
       </div>
-      <div className="flex flex-row md:gap-10 sm:gap-5 gap-0 justify-between items-center">
-        <div>
-          <Contacto />
-        </div>
-        <div>
-          <Features />
-        </div>
+      <div className="flex flex-row md:gap-10 sm:gap-5 gap-0 justify-between md:items-center sm:items-center items-baseline">
         <div>
           <Pricing />
         </div>
-      </div>
-      <div>
-        <RegisterNav />
+        <div>
+          <RegisterNav />
+        </div>
       </div>
     </nav>
   );

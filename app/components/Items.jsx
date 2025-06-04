@@ -59,7 +59,7 @@ export default function Items({
     },
     {
       id: 11,
-      nombre: "Salmon",
+      nombre: "Salmón",
       imagen: "salmon.webp",
     },
     {

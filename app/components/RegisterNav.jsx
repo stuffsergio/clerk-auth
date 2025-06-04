@@ -19,7 +19,7 @@ export default function RegisterNav() {
       <aside
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
-        className="relative flex items-center gap-2 px-4 py-2 font-bold text-lg rounded-md hover:bg-gray-500/5 border border-transparent hover:border-gray-500/10 transition-all duration-300"
+        className="relative flex items-center gap-2 px-4 py-2 font-bold text-lg rounded-md hover:bg-gray-500/5 border border-transparent hover:border-gray-500/10 transform transition-all duration-300"
       >
         <SignIn />
       </aside>
@@ -41,12 +41,12 @@ export default function RegisterNav() {
             <SignInButton
               mode="redirect"
               routing="path"
-              className="cursor-pointer hover:opacity-80 transition-opacity"
+              className="cursor-pointer hover:opacity-80 transition-opacity transform duration-150"
             >
               <p>Iniciar sesión</p>
             </SignInButton>
 
-            <SignUpButton className="cursor-pointer hover:opacity-80 transition-opacity">
+            <SignUpButton className="cursor-pointer hover:opacity-80 transition-opacity transform duration-150">
               <p>¿Primera vez?</p>
             </SignUpButton>
           </div>
