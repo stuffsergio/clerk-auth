@@ -6,30 +6,34 @@ export default function Cart() {
 
   return (
     <div className="px-[5dvw] py-10">
-      <h1 className="text-2xl font-bold mb-6">Tu Carrito</h1>
+      <section className="flex flex-row gap-12 mb-6 px-12 justify-between items-center">
+        <h1 className="text-2xl font-bold">Tu Carrito</h1>
+        <p className="text-sm font-normal">Elementos: {cart.length}</p>
+      </section>
+
       {cart.length === 0 ? (
         <p className="text-gray-600">Tu carrito está vacío</p>
       ) : (
-        <div>
+        <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-6">
           {cart.map((item, index) => (
             <div
               key={index}
-              className="flex flex-row items-center gap-4 p-4 rounded-lg border border-gray-300 bg-white shadow-sm"
+              className="flex flex-col items-center gap-4 p-4 rounded-lg border border-white bg-white shadow-md"
             >
               <img
                 src={`/images/${item.imagen}`}
                 alt={item.nombre}
-                className="w-24 h-24 object-contain"
+                className="w-34 h-34 object-contain"
               />
-              <div className="flex-1">
-                <h2 className="text-lg font-semibold">{item.nombre}</h2>
+              <div className="w-full flex flex-row gap-3 px-3 justify-between">
+                <h4 className="text-gray-900 font-semibold">{item.nombre}</h4>
+                <button
+                  onClick={() => removeFromCart(index)}
+                  className="text-sm text-red-600 hover:underline"
+                >
+                  Quitar
+                </button>
               </div>
-              <button
-                onClick={() => removeFromCart(index)}
-                className="text-sm text-red-600 hover:underline"
-              >
-                Quitar
-              </button>
             </div>
           ))}
         </div>

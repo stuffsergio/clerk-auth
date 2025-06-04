@@ -1,24 +1,26 @@
 "use client";
 import { useCart } from "./context/CartContext";
 
-export default function Items() {
+export default function Items({
+  searchItem /* Recibe el estado de searchItem, es decir, lo que ha escrito el user en el input */,
+}) {
   const { addToCart } = useCart();
 
   const productos = [
     {
       id: 1,
       nombre: "Puffy Inflatable",
-      imagen: "/puffy-inflatable.webp",
+      imagen: "puffy-inflatable.webp",
     },
     {
       id: 2,
       nombre: "Glosse Brain",
-      imagen: "/glossy-brain.webp",
+      imagen: "glossy-brain.webp",
     },
     {
       id: 3,
       nombre: "Textured Book",
-      imagen: "/textured-book.webp",
+      imagen: "textured-book.webp",
     },
     {
       id: 4,
@@ -45,11 +47,43 @@ export default function Items() {
       nombre: "Smoothies",
       imagen: "smoothie.webp",
     },
+    {
+      id: 9,
+      nombre: "Plátanos",
+      imagen: "banana.webp",
+    },
+    {
+      id: 10,
+      nombre: "Naranjas",
+      imagen: "naranjas.webp",
+    },
+    {
+      id: 11,
+      nombre: "Salmon",
+      imagen: "salmon.webp",
+    },
+    {
+      id: 12,
+      nombre: "Yogurt",
+      imagen: "yogurt.webp",
+    },
+    {
+      id: 13,
+      nombre: "Aguacates",
+      imagen: "aguacates.webp",
+    },
   ];
+
+  const productosFiltrados = productos.filter(
+    (item) => item.nombre.toLowerCase().includes(searchItem.toLowerCase())
+    /* Filtra los productos, el nuevo array generado contiene el nombre del item
+    includes() --> devuelve true si searchItem.toLowerCase() es parte de item.nombre.toLowerCase()
+    */
+  );
 
   return (
     <div className="grid md:grid-cols-4 grid-cols-3 md:gap-5 sm:gap-10 gap-7 px-10">
-      {productos.map((producto) => (
+      {productosFiltrados.map((producto) => (
         <section
           key={producto.id}
           className="flex flex-col items-baseline justify-center gap-2"
