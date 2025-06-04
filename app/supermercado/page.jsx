@@ -46,35 +46,45 @@ export default function Supermercados() {
   );
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Supermercados Cercanos</h1>
+    <div className="p-10">
+      <h1 className="md:text-2xl text-xl text-center font-bold pb-8">
+        Supermercados Cercanos
+      </h1>
 
-      {loading && <p>Cargando...</p>}
+      {loading && <p className="md:text-lg text-sm">Cargando...</p>}
       {error && <p className="text-red-500">{error}</p>}
 
       {!loading && !error && (
-        <div>
-          <aside className="flex flex-row gap-6 items-center pb-6">
-            <p>¿Dónde estás buscando?</p>
+        <div className="flex flex-col justify-center items-center gap-5">
+          <aside className="w-[90dvw] flex flex-row items-center gap-6 px-8 py-5 rounded-xl bg-white shadow-lg">
+            <p className="md:text-lg sm:text-md text-sm">
+              ¿Dónde estás buscando?
+            </p>
             <input
               type="text"
               value={nombreSupermercado}
               onChange={(e) => setNombreSupermercado(e.target.value)}
-              placeholder="Buscar aquí"
-              className="px-2 py-1 text-sm rounded-lg border border-sky-500 focus:outline-none hover:bg-sky-500/10 transform transition-all duration-300"
+              placeholder="Buscar supermercados"
+              className="px-2 py-1 md:text-md sm:text-md text-sm rounded-lg border border-sky-500 focus:outline-none hover:bg-sky-500/10 transform transition-all duration-300"
             />
           </aside>
-          <ul className="grid md:grid-cols-4 grid-cols-3 gap-4">
+          <ul className="w-[90dvw] grid md:grid-cols-3 grid-cols-2 gap-4">
             {supermercadosFiltrados.map((place) => (
               <li
                 key={place.place_id}
-                className="p-4 bg-white rounded-xl shadow-md"
+                className="flex md:flex-row flex-col justify-between gap-3 p-4 bg-white rounded-xl shadow-md"
               >
-                <h2 className="text-xl font-semibold">{place.name}</h2>
-                <p className="text-gray-600">{place.vicinity}</p>
-                <p>{place.open_now}</p>
+                <aside className="flex flex-col gap-1 md:w-[80%]">
+                  <h3 className="md:text-xl text-lg font-bold">{place.name}</h3>
+                  <p className="text-gray-700 md:text-sm sm:text-sm text-xs">
+                    {place.vicinity}
+                  </p>
+                  <p className="text-black/85 text-sm">{place.open_now}</p>
+                </aside>
                 {place.rating && (
-                  <p className="text-sm text-yellow-600">⭐ {place.rating}</p>
+                  <p className="text-sm md:text-right text-left text-yellow-600">
+                    ⭐ {place.rating}
+                  </p>
                 )}
               </li>
             ))}
