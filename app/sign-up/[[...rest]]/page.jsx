@@ -45,34 +45,154 @@ export default function SignUpPage() {
               </Clerk.Connection>
             </div>
             <div className="flex flex-col md:gap-3 sm:gap-2 gap-2 justify-center items-center">
-              <Clerk.Field name="username">
+              <Clerk.Field
+                className="flex flex-row items-center"
+                name="username"
+              >
                 <Clerk.Label className="mr-3">Username</Clerk.Label>
                 <Clerk.Input
                   autoComplete="off"
                   autoCorrect="off"
                   className="px-2 py-1 text-sm rounded-xl border border-sky-500 focus:outline-none hover:bg-sky-500/10 transition-all duration-300"
                 />
-                <Clerk.FieldError />
+                <Clerk.FieldError>
+                  {({ message }) => {
+                    let customMessage;
+
+                    if (
+                      message?.includes(
+                        "Username can only contain letters, numbers and '_' or '-'."
+                      )
+                    ) {
+                      customMessage =
+                        "Username solo admite letras, números y '_' o '-'.";
+                    }
+
+                    if (!customMessage) return null;
+
+                    return (
+                      <div className="relative ml-2 w-fit text-red-600 group">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5 flex-shrink-0 cursor-pointer"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 9v2m0 4h.01M12 5a7 7 0 100 14 7 7 0 000-14z"
+                          />
+                        </svg>
+                        <span className="absolute left-6 top-1/2 -translate-y-1/2 whitespace-nowrap rounded bg-red-100 px-2 py-1 text-xs text-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+                          {customMessage}
+                        </span>
+                      </div>
+                    );
+                  }}
+                </Clerk.FieldError>{" "}
               </Clerk.Field>
 
-              <Clerk.Field name="emailAddress">
+              <Clerk.Field
+                className="flex flex-row items-center"
+                name="emailAddress"
+              >
                 <Clerk.Label className="mr-12">Email</Clerk.Label>
                 <Clerk.Input
                   autoComplete="off"
                   autoCorrect="off"
                   className="px-2 py-1 text-sm rounded-xl border border-sky-500 focus:outline-none hover:bg-sky-500/10 transition-all duration-300"
                 />
-                <Clerk.FieldError />
+                <Clerk.FieldError>
+                  {({ message }) => {
+                    let customMessage;
+
+                    if (
+                      message?.includes(
+                        "That email address is taken. Please try another."
+                      )
+                    ) {
+                      customMessage = "Este email ya existe.";
+                    } else if (message?.includes("Enter email address.")) {
+                      customMessage = "Introduzca su email.";
+                    }
+
+                    if (!customMessage) return null;
+
+                    return (
+                      <div className="relative ml-2 w-fit text-red-600 group">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5 flex-shrink-0 cursor-pointer"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 9v2m0 4h.01M12 5a7 7 0 100 14 7 7 0 000-14z"
+                          />
+                        </svg>
+                        <span className="absolute left-6 top-1/2 -translate-y-1/2 whitespace-nowrap rounded bg-red-100 px-2 py-1 text-xs text-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+                          {customMessage}
+                        </span>
+                      </div>
+                    );
+                  }}
+                </Clerk.FieldError>
               </Clerk.Field>
 
-              <Clerk.Field name="password">
+              <Clerk.Field
+                className="flex flex-row items-center"
+                name="password"
+              >
                 <Clerk.Label className="mr-4">Password</Clerk.Label>
                 <Clerk.Input
                   autoComplete="off"
                   autoCorrect="off"
                   className="px-2 py-1 text-sm rounded-xl border border-sky-500 focus:outline-none hover:bg-sky-500/10 transition-all duration-300"
                 />
-                <Clerk.FieldError />
+                <Clerk.FieldError>
+                  {({ message }) => {
+                    let customMessage;
+
+                    if (
+                      message?.includes(
+                        "Passwords must be 8 characters or more."
+                      )
+                    ) {
+                      customMessage = "Debe contener 8 caracteres o más.";
+                    }
+
+                    if (!customMessage) return null;
+
+                    return (
+                      <div className="relative ml-2 w-fit text-red-600 group">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5 flex-shrink-0 cursor-pointer"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 9v2m0 4h.01M12 5a7 7 0 100 14 7 7 0 000-14z"
+                          />
+                        </svg>
+                        <span className="absolute left-6 top-1/2 -translate-y-1/2 whitespace-nowrap rounded bg-red-100 px-2 py-1 text-xs text-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+                          {customMessage}
+                        </span>
+                      </div>
+                    );
+                  }}
+                </Clerk.FieldError>
               </Clerk.Field>
             </div>
 

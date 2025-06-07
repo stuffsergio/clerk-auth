@@ -92,6 +92,11 @@ export default function Items({
       nombre: "Aceite de oliva",
       imagen: "aceite-oliva.webp",
     },
+    {
+      id: 18,
+      nombre: "Barra de pan",
+      imagen: "barra-pan.webp",
+    },
   ];
 
   const productosFiltrados = productos.filter(
