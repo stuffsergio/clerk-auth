@@ -160,6 +160,52 @@ export default function WelcomeUser() {
             </div>
           </div>
         </div>
+
+        <div>
+          <h3>Próximamente</h3>
+          <div className="flex md:flex-row flex-col">
+            <p className="md:text-sm text-xs">
+              Continuamente estamos implementando y mejorando funcionalidades en
+              ShopList.
+            </p>
+            <p className="md:text-sm text-xs">Aquí tienes nuestro roadmap.</p>
+          </div>
+          <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-6">
+            <div className="flex flex-col gap-3 p-4 border border-[#360000] shadow-lg bg-black/85 text-xl font-bold hover:scale-102 hover:translate-y-1 ease-in-out transform transition-all duration-150">
+              <h3 className="md:text-2xl text-xl text-black">Pricing</h3>
+              <p className="md:text-sm text-xs text-black/85">
+                Elige entre los mejores planes para disfrutar al máximo de
+                ShopList.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 p-4 border border-[#360000] shadow-lg bg-black/85 text-xl font-bold hover:scale-102 hover:translate-y-1 ease-in-out transform transition-all duration-150">
+              <h3 className="md:text-2xl text-xl text-black">
+                Agrega tus favoritos
+              </h3>
+              <p className="md:text-sm text-xs text-black/85">
+                No tardes más de la cuenta, añade tus productos favoritos para
+                tenerlos más cerca que nunca.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 p-4 border border-[#360000] shadow-lg bg-black/85 text-xl font-bold hover:scale-102 hover:translate-y-1 ease-in-out transform transition-all duration-150">
+              <h3 className="md:text-2xl text-xl text-black">
+                Selector de theme
+              </h3>
+              <p className="md:text-sm text-xs text-black/85">
+                Elige entre claro u oscuro para no dañar tu vista.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 p-4 border border-[#360000] shadow-lg bg-black/85 text-xl font-bold hover:scale-102 hover:translate-y-1 ease-in-out transform transition-all duration-150">
+              <h3 className="md:text-2xl text-xl text-black">FAQ & Contacto</h3>
+              <p className="md:text-sm text-xs text-black/85">
+                Resulve tus dudas en nuestro apartado de Preguntas y Respuestas.
+                Y contacto con nosotros para poder mejorar cada vez más, o
+                contribuir a mejorar el proyecto.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/*<div className="flex flex-col gap-3 w-full md:w-1/2 px-4 md:pl-20 mb-8 md:mb-0">
           <h3 className="text-md font-bold">Próximamente</h3>
           <div className="flex flex-col gap-2">

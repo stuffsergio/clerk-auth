@@ -72,6 +72,26 @@ export default function Items({
       nombre: "Aguacates",
       imagen: "aguacates.webp",
     },
+    {
+      id: 14,
+      nombre: "Cereales",
+      imagen: "cereales.webp",
+    },
+    {
+      id: 15,
+      nombre: "Filete de ternera",
+      imagen: "ternera.webp",
+    },
+    {
+      id: 16,
+      nombre: "Huevos",
+      imagen: "huevos.webp",
+    },
+    {
+      id: 17,
+      nombre: "Aceite de oliva",
+      imagen: "aceite-oliva.webp",
+    },
   ];
 
   const productosFiltrados = productos.filter(
