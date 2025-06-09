@@ -9,93 +9,88 @@ export default function Items({
   const productos = [
     {
       id: 1,
-      nombre: "Puffy Inflatable",
-      imagen: "puffy-inflatable.webp",
-    },
-    {
-      id: 2,
-      nombre: "Glosse Brain",
-      imagen: "glossy-brain.webp",
-    },
-    {
-      id: 3,
-      nombre: "Textured Book",
-      imagen: "textured-book.webp",
-    },
-    {
-      id: 4,
-      nombre: "Abstract Liquid",
-      imagen: "abstract-liquid.webp",
-    },
-    {
-      id: 5,
       nombre: "Brócoli",
       imagen: "brocoli.webp",
     },
     {
-      id: 6,
+      id: 1,
       nombre: "Leche",
       imagen: "leche.webp",
     },
     {
-      id: 7,
+      id: 3,
       nombre: "Arroz",
       imagen: "arroz.webp",
     },
     {
-      id: 8,
+      id: 4,
       nombre: "Smoothies",
       imagen: "smoothie.webp",
     },
     {
-      id: 9,
+      id: 5,
       nombre: "Plátanos",
       imagen: "banana.webp",
     },
     {
-      id: 10,
+      id: 6,
       nombre: "Naranjas",
       imagen: "naranjas.webp",
     },
     {
-      id: 11,
+      id: 7,
       nombre: "Salmón",
       imagen: "salmon.webp",
     },
     {
-      id: 12,
+      id: 8,
       nombre: "Yogurt",
       imagen: "yogurt.webp",
     },
     {
-      id: 13,
+      id: 9,
       nombre: "Aguacates",
       imagen: "aguacates.webp",
     },
     {
-      id: 14,
+      id: 10,
       nombre: "Cereales",
       imagen: "cereales.webp",
     },
     {
-      id: 15,
+      id: 11,
       nombre: "Filete de ternera",
       imagen: "ternera.webp",
     },
     {
-      id: 16,
+      id: 12,
       nombre: "Huevos",
       imagen: "huevos.webp",
     },
     {
-      id: 17,
+      id: 13,
       nombre: "Aceite de oliva",
       imagen: "aceite-oliva.webp",
     },
     {
-      id: 18,
+      id: 14,
       nombre: "Barra de pan",
       imagen: "barra-pan.webp",
+    },
+    {
+      id: 15,
+      nombre: "Mangos",
+      imagen: "mangos.webp",
+    },
+    {
+      id: 16,
+      nombre: "Avena",
+      imagen: "avena.webp",
+    },
+    {
+      id: 17,
+      nombre: "Tomates",
+      imagen: "tomates.webp",
     },
   ];
 
