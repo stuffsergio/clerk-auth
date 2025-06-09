@@ -2,38 +2,6 @@ import { UserButton, SignInButton, SignUpButton } from "@clerk/nextjs";
 import { ArrowRight, User } from "lucide-react";
 
 export default function WelcomeUser() {
-  const users = [
-    {
-      nombre: "Jose Alberto",
-      rol: "Estudiante de Idiomas",
-      copy: "Fix: validación en formulario de login",
-      img: "jose",
-    },
-    {
-      nombre: "Leandro",
-      rol: "Formación en Barbería",
-      copy: "Refactor: limpiado código en componente Header",
-      img: "lenny",
-    },
-    {
-      nombre: "Santi",
-      rol: "Estudiante de Geografía",
-      copy: "Feat: agregado botón de eliminar tarea",
-      img: "santi",
-    },
-    {
-      nombre: "Sofía",
-      rol: "Estudiante de Primaria",
-      copy: "Docs: actualización de README con instrucciones",
-      img: "sofia",
-    },
-    {
-      nombre: "Diego",
-      rol: "Estudiante de Química",
-      copy: "Chore: mejoras menores en estilos globales",
-      img: "diego",
-    },
-  ];
   const company = [{ svg: "google" }, { svg: "github" }, { svg: "airbnb" }];
 
   return (
@@ -96,139 +64,92 @@ export default function WelcomeUser() {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row justify-center mx-4 md:mx-20">
-        <div className="flex flex-col gap-3 w-full md:w-1/2 px-4 md:pl-20 mb-8 md:mb-0">
-          <h3 className="text-md font-bold">
+      <section className="flex flex-col md:flex-row justify-between items-start gap-10 px-8 md:px-25 py-10">
+        {/* Primer bloque (a la izq en md+) */}
+        <div className="flex flex-col gap-6 w-full md:w-1/2">
+          <h3 className="md:text-xl text-md font-bold">
             Lo último en <i>features</i>
           </h3>
-          {/* 1º */}
-          <div className="flex flex-row gap-5 items-center">
-            <div className="relative min-w-20 md:min-w-25 h-20 bg-[#EAEAEB] rounded-lg hover:scale-105 hover:translate-x-1 hover:translate-y-1 transform transition-all duration-250">
-              <div className="relative w-8 h-8 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-red-500/80 rounded-lg">
-                <img
-                  src="/icons/icon-palette.svg"
-                  alt="icon palette"
-                  className="w-5 h-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col gap-1">
-              <p className="font-bold text-sm">
-                Geolocalización de supermercados
-              </p>
-              <p className="text-sm font-light">
-                Tendrás lo mejor en supermercados lo más cerca siempre.
-              </p>
-            </div>
-          </div>
-          {/* 2º */}
-          <div className="flex flex-row gap-5 items-center">
-            <div className="relative min-w-20 md:min-w-25 h-20 bg-[#EAEAEB] rounded-lg hover:scale-105 hover:translate-x-1 hover:translate-y-1 transform transition-all duration-250">
-              <div className="relative max-w-8 h-8 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-teal-500/80 rounded-lg">
-                <img
-                  src="/icons/icon-book1.svg"
-                  alt="icon book"
-                  className="w-5 h-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col gap-1">
-              <p className="font-bold text-sm">Filtra tus productos</p>
-              <p className="text-sm font-light">
-                Recientemente se han añadido más productos, ahora puedes
-                buscarlos tú mismo.
-              </p>
-            </div>
-          </div>
-          {/* 3º */}
-          <div className="flex flex-row gap-5 items-center">
-            <div className="relative min-w-20 md:min-w-25 h-20 bg-[#EAEAEB] rounded-lg hover:scale-105 hover:translate-x-1 hover:translate-y-1 transform transition-all duration-250">
-              <div className="relative w-8 h-8 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-indigo-500/80 rounded-lg">
-                <img
-                  src="/icons/icon-music.svg"
-                  alt="icon music"
-                  className="w-5 h-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col gap-1">
-              <p className="font-bold text-sm">Favoritos</p>
-              <p className="text-sm font-light">
-                Añade los productos que siempre compres a favoritos para
-                tenerlos a mano.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <div>
-          <h3>Próximamente</h3>
-          <div className="flex md:flex-row flex-col">
-            <p className="md:text-sm text-xs">
-              Continuamente estamos implementando y mejorando funcionalidades en
-              ShopList.
-            </p>
-            <p className="md:text-sm text-xs">Aquí tienes nuestro roadmap.</p>
-          </div>
-          <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-6">
-            <div className="flex flex-col gap-3 p-4 border border-[#360000] shadow-lg bg-black/85 text-xl font-bold hover:scale-102 hover:translate-y-1 ease-in-out transform transition-all duration-150">
-              <h3 className="md:text-2xl text-xl text-black">Pricing</h3>
-              <p className="md:text-sm text-xs text-black/85">
-                Elige entre los mejores planes para disfrutar al máximo de
-                ShopList.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3 p-4 border border-[#360000] shadow-lg bg-black/85 text-xl font-bold hover:scale-102 hover:translate-y-1 ease-in-out transform transition-all duration-150">
-              <h3 className="md:text-2xl text-xl text-black">
-                Agrega tus favoritos
-              </h3>
-              <p className="md:text-sm text-xs text-black/85">
-                No tardes más de la cuenta, añade tus productos favoritos para
-                tenerlos más cerca que nunca.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3 p-4 border border-[#360000] shadow-lg bg-black/85 text-xl font-bold hover:scale-102 hover:translate-y-1 ease-in-out transform transition-all duration-150">
-              <h3 className="md:text-2xl text-xl text-black">
-                Selector de theme
-              </h3>
-              <p className="md:text-sm text-xs text-black/85">
-                Elige entre claro u oscuro para no dañar tu vista.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3 p-4 border border-[#360000] shadow-lg bg-black/85 text-xl font-bold hover:scale-102 hover:translate-y-1 ease-in-out transform transition-all duration-150">
-              <h3 className="md:text-2xl text-xl text-black">FAQ & Contacto</h3>
-              <p className="md:text-sm text-xs text-black/85">
-                Resulve tus dudas en nuestro apartado de Preguntas y Respuestas.
-                Y contacto con nosotros para poder mejorar cada vez más, o
-                contribuir a mejorar el proyecto.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/*<div className="flex flex-col gap-3 w-full md:w-1/2 px-4 md:pl-20 mb-8 md:mb-0">
-          <h3 className="text-md font-bold">Próximamente</h3>
-          <div className="flex flex-col gap-2">
-            {users.map((usuario, index) => (
-              <div
-                key={index}
-                className="w-full md:w-fit flex flex-row gap-2 pt-1 pr-4 pb-1 pl-2 items-center rounded-full group hover:bg-stone-500/15 hover:scale-101 hover:border hover:border-black transform transition-all"
-              >
-                <img
-                  src={`/icons/avatar-${usuario.img}.svg`}
-                  alt="user avatar"
-                  className="w-8 h-8 p-1.5 rounded-full border"
-                />
-                <div className="flex flex-col">
-                  <strong className="text-sm text-[#0D0D0D]">
-                    {usuario.nombre} - {usuario.rol}
-                  </strong>
-                  <p className="text-sm font-light">{usuario.copy}</p>
+          {/* Feature */}
+          {[
+            {
+              icon: "/icons/icon-palette.svg",
+              bg: "bg-red-500/80",
+              title: "Supermercados cerca de ti",
+              desc: "Encuentra los mejores supermercados sin salir de tu zona.",
+            },
+            {
+              icon: "/icons/icon-book1.svg",
+              bg: "bg-teal-500/80",
+              title: "Filtra y encuentra rápido",
+              desc: "Busca productos fácilmente simplemente escribiendo.",
+            },
+            {
+              icon: "/icons/icon-music.svg",
+              bg: "bg-indigo-500/80",
+              title: "Tus favoritos, siempre a mano",
+              desc: "Guarda lo que más usas y accede en segundos.",
+            },
+          ].map((item, i) => (
+            <div key={i} className="flex items-center gap-4">
+              <div className="w-20 h-20 bg-[#EAEAEB] rounded-lg flex items-center justify-center hover:scale-105 hover:translate-x-1 hover:translate-y-1 transform transition-all duration-250">
+                <div
+                  className={`w-8 h-8 ${item.bg} rounded-lg flex items-center justify-center`}
+                >
+                  <img src={item.icon} alt="" className="w-5 h-5" />
                 </div>
               </div>
-            ))}
+              <div className="flex flex-col gap-1">
+                <p className="font-bold text-sm">{item.title}</p>
+                <p className="text-sm font-light">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Segundo bloque (a la dcha en md+) */}
+        <div className="w-full md:w-1/2 flex flex-col gap-6">
+          <h3 className="md:text-xl text-md font-bold">Próximamente</h3>
+
+          <div className="flex flex-col gap-3">
+            <div className="flex md:flex-row text-sm md:space-x-0.5 flex-col space-y-0.5">
+              <p>En ShopList no dejamos de innovar.</p>
+              <p>Mira lo que estamos preparando para ti.</p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {[
+                {
+                  title: "Planes flexibles",
+                  desc: "Escoge el plan perfecto para ti y aprovecha todo lo que te ofrecemos.",
+                },
+                {
+                  title: "Acceso rápido a tus favoritos",
+                  desc: "Guarda tus productos esenciales y accede a ellos en un click.",
+                },
+                {
+                  title: "Modo claro u oscuro",
+                  desc: "Personaliza tu experiencia según tu estilo o momento del día.",
+                },
+                {
+                  title: "Dudas & Soporte",
+                  desc: "Consulta nuestra FAQ o contáctanos para colaborar y mejorar juntos.",
+                },
+              ].map((card, i) => (
+                <div
+                  key={i}
+                  className="p-6 rounded-2xl border border-gray-300 shadow-lg bg-white hover:scale-[1.02] hover:-translate-y-1 transition-transform duration-200 ease-in-out"
+                >
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm text-gray-800">{card.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>*/}
+        </div>
       </section>
     </div>
   );

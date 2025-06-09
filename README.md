@@ -13,6 +13,43 @@ IMPORTANTE
   --> Se pide dentro de 'clerk-auth-app' una Authorization callback URL -> se encuentra en las 'custom credentials' de Clerk
 - AYUDA: Lo relacionado con el inicio de sesión de este proyecto se encuentra en chatgpt y claude de la cuenta de google NewTimelessProject
 
+## Pasos para producción en Clerk
+
+## 🔐 Clerk + Vercel + Dominio Personalizado (Guía Rápida)
+
+### ✅ Requisitos
+
+- Proyecto en Next.js
+- Clerk account
+- Dominio personalizado (ej: `stuffsergio.com`)
+- Dominio gestionado en Vercel
+
+---
+
+### 1️⃣ Configura Clerk en modo Producción
+
+- Entra a [Clerk Dashboard](https://dashboard.clerk.com)
+- Usa o crea una instancia y cámbiala a **Production**
+- En `Settings > Domains`, añade:
+  - `clerk.stuffsergio.com` (Frontend API)
+  - `accounts.stuffsergio.com` (Account portal)
+
+---
+
+### 2️⃣ Registros DNS en Vercel
+
+Ve a **Vercel > Domains > stuffsergio.com > DNS** y añade:
+CNAME clerk frontend-api.clerk.services.
+CNAME accounts accounts.clerk.services.
+
+---
+
+## 3️⃣ Añadir los emails personalizados (igual que arriba 👆)
+
+CNAME clkmail mail.xxxxx.clerk.services.
+CNAME clk.\_domainkey dkim1.xxxxx.clerk.services.
+CNAME clk2.\_domainkey dkim2.xxxxx.clerk.services.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
