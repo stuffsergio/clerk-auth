@@ -24,7 +24,7 @@ export default function Items({
     },
     {
       id: 4,
-      nombre: "Smoothies",
+      nombre: "Zumos",
       imagen: "smoothie.webp",
     },
     {
