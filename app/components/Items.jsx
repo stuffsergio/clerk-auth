@@ -92,6 +92,56 @@ export default function Items({
       nombre: "Tomates",
       imagen: "tomates.webp",
     },
+    {
+      id: 18,
+      nombre: "Lechuga",
+      imagen: "lechuga.webp",
+    },
+    {
+      id: 19,
+      nombre: "Patatas",
+      imagen: "patatas.webp",
+    },
+    {
+      id: 20,
+      nombre: "Piña",
+      imagen: "pina.webp",
+    },
+    {
+      id: 21,
+      nombre: "Pimientos",
+      imagen: "pimientos.webp",
+    },
+    {
+      id: 22,
+      nombre: "Queso",
+      imagen: "queso.webp",
+    },
+    {
+      id: 23,
+      nombre: "Sandía",
+      imagen: "sandia.webp",
+    },
+    {
+      id: 24,
+      nombre: "Cebollas",
+      imagen: "cebollas.webp",
+    },
+    {
+      id: 25,
+      nombre: "Limones",
+      imagen: "limones.webp",
+    },
+    {
+      id: 26,
+      nombre: "Fresas",
+      imagen: "fresas.webp",
+    },
+    {
+      id: 27,
+      nombre: "Kiwis",
+      imagen: "kiwis.webp",
+    },
   ];
 
   const productosFiltrados = productos.filter(
