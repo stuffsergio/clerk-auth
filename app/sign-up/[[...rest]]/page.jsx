@@ -289,14 +289,29 @@ export default function SignUpPage() {
             </SignUp.Strategy>
           </SignUp.Step>
 
-          <SignUp.Step name="continue" className="...">
-            <Clerk.Field name="username">
-              <Clerk.Label>Elige un nombre de usuario</Clerk.Label>
-              <Clerk.Input className="..." />
+          <SignUp.Step
+            name="continue"
+            className="flex flex-col justify-center items-center md:gap-1 gap-0.5"
+          >
+            <Clerk.Field
+              name="username"
+              className="flex flex-col justify-center items-center"
+            >
+              <Clerk.Label className="p-2 text-md font-bold">
+                Elige un nombre de usuario
+              </Clerk.Label>
+              <Clerk.Input
+                autoComplete="off"
+                autoCorrect="off"
+                className="px-2 py-1 text-sm rounded-xl border border-sky-500 focus:outline-none hover:bg-sky-500/10 transition-all duration-300"
+              />
               <Clerk.FieldError />
             </Clerk.Field>
 
-            <SignUp.Action className="..." submit>
+            <SignUp.Action
+              className="w-fit my-5 m-auto text-sm text-lime-950 bg-lime-300/50 border rounded-xl border-lime-700 font-bold  px-3 py-1.5  hover:scale-103 transform transition-all duration-200"
+              submit
+            >
               Continuar
             </SignUp.Action>
           </SignUp.Step>

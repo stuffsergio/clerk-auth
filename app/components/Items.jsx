@@ -13,7 +13,7 @@ export default function Items({
       imagen: "brocoli.webp",
     },
     {
-      id: 1,
+      id: 2,
       nombre: "Leche",
       imagen: "leche.webp",
     },
@@ -141,6 +141,26 @@ export default function Items({
       id: 27,
       nombre: "Kiwis",
       imagen: "kiwis.webp",
+    },
+    {
+      id: 28,
+      nombre: "Carne picada",
+      imagen: "carne-picada.webp",
+    },
+    {
+      id: 29,
+      nombre: "Hamburguesas",
+      imagen: "hamburguesa-vacuno.webp",
+    },
+    {
+      id: 30,
+      nombre: "Filetes de pollo",
+      imagen: "filete-pollo.webp",
+    },
+    {
+      id: 31,
+      nombre: "Filetes de cerdo",
+      imagen: "filete-cerdo.webp",
     },
   ];
 

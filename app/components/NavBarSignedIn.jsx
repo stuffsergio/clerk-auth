@@ -8,10 +8,6 @@ import { useCart } from "./context/CartContext";
 export default function NavBarSignedIn() {
   const { cart } = useCart();
 
-  useEffect(() => {
-    console.log("CLERK ENV: ", process.env.NEXT_PUBLIC_CLERK_FRONTEND_API);
-  }, []);
-
   return (
     <nav className="sticky w-[95dvw] m-auto md:top-3 sm:top-2 top-2 z-99 rounded-xl bg-white/5 backdrop-blur-xl md:px-20 sm:px-7 px-5 py-0 flex justify-between items-center">
       <div>
