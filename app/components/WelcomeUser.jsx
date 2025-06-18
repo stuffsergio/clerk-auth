@@ -1,67 +1,31 @@
 import { UserButton, SignInButton, SignUpButton } from "@clerk/nextjs";
 import { ArrowRight, User } from "lucide-react";
+import Image from "next/image";
 
 export default function WelcomeUser() {
-  const company = [{ svg: "google" }, { svg: "github" }, { svg: "airbnb" }];
-
   return (
-    <div className="pb-50 md:pt-8 sm:pt-7 pt-5">
-      <section className="flex flex-col gap-5 md:flex-row justify-center items-center px-5 pb-15">
-        <div className="h-full flex flex-col w-full md:w-1/2 px-20 lg md:py-18 sm:py-10 py-5 justify-center md:gap-5 sm:gap-3 gap-2 rounded-xl bg-black">
-          <aside className="flex flex-row items-center md:gap-4 sm:gap-2 gap-1">
-            <div className="flex flex-row md:gap-1 gap-0.5">
-              {company.map((company, index) => (
-                <div
-                  className="relative border border-white rounded-full bg-white md:p-1 p-0.5"
-                  key={index}
-                >
-                  <img
-                    src={`/icons/icon-${company.svg}.svg`}
-                    alt="company Icon"
-                    className="w-4 h-4 rounded-xl"
-                  />
-                </div>
-              ))}
-            </div>
-            <p className="text-xs text-white/80">1200+ users</p>
-          </aside>
-          <h1 className="md:text-2xl sm:text-xl text-2xl text-blue-200">
-            LIST SHOP
-          </h1>
-          <div className="flex flex-col">
-            <p className="md:text-sm sm:text-xs text-xs text-white/80">
-              No compliques la compra, hazlo sencillo y rápido con{" "}
-              <i className="text-blue-200 font-bold tracking-wider">ListShop</i>
-              .
-            </p>
-            <p className="md:block sm:block hidden md:text-sm sm:text-xs text-xs text-white/80">
-              Tus alimentos y recursos favoritos al alcance de tu mano, puedes
-              hacerlo ahora mismo.
+    <div className="">
+      <section className="h-[80vh] mb-[20vh] flex flex-col gap-8 items-center justify-center bg-[radial-gradient(circle_at_center,_#E44856_0%,_#F098A0_20%,_#FCE9EA_30%,_transparent_40%)] px-4 md:px-10 text-center">
+        <div className="flex flex-col items-center md:items-start justify-center gap-5 max-w-xl">
+          <div className="flex flex-col items-center md:items-start justify-center">
+            <h1 className="font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+              ListShop
+            </h1>
+            <p className="text-black/80 text-base sm:text-lg md:text-xl font-light -translate-y-1.5 mt-2">
+              Tu <i className="text-lime-400 tracking-wide font-bold">compra</i>{" "}
+              en tu mano
             </p>
           </div>
-          <aside className="text-white text-sm flex flex-row items-center gap-4">
-            <SignUpButton
-              mode="redirect"
-              routing="path"
-              className="group cursor-pointer rounded-xl px-3 py-1 flex flex-row gap-1.5 items-center justify-center text-[#4b040b] border border-[#c90c1f] bg-[#ff9ca6]"
-            >
-              <aside>
-                <strong className="group-hover:opacity-85">Probar</strong>
-                <ArrowRight className="group-hover:translate-x-1.5 transition-all transform duration-200 md:w-5 md:h-5 sm:w-4 sm:h-4 w-3 h-3" />
-              </aside>
-            </SignUpButton>
-          </aside>
+          <div className="text-black/80 text-sm sm:text-base md:text-lg space-y-1 mt-2">
+            <p>
+              Añade tus productos a la lista de la compra con un solo click.
+            </p>
+            <p>No necesitas un boli o papel, ni siquiera pensar.</p>
+          </div>
         </div>
-        <div className="relative w-full md:w-1/2">
-          <img
-            src="/images/roomtonosClaros.webp"
-            alt="aesthetic room"
-            className="rounded-xl"
-          />
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 font-bold text-[#360000] text-center md:text-xl sm:text-lg">
-            New Timeless Project
-          </h1>
-        </div>
+        <SignUpButton className="mt-6 cursor-pointer hover:scale-105 hover:-translate-y-0.5 transform transition-all shadow-blue-400/80 shadow-lg rounded-full px-6 py-2 tracking-wide text-lg sm:text-xl font-bold bg-blue-600 text-white">
+          <h3>Empezar</h3>
+        </SignUpButton>
       </section>
 
       <section className="flex flex-col md:flex-row justify-between items-start gap-10 px-8 md:px-25 py-10">
