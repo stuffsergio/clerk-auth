@@ -44,6 +44,12 @@ export default function SignUpPage() {
                 <span className="text-sm">GitHub</span>
               </Clerk.Connection>
             </div>
+            <div className="flex items-center gap-4">
+              <div className="flex-grow border-t border-[#360000]"></div>
+              <span className="text-[#360000] text-sm">or</span>
+              <div className="flex-grow border-t border-[#360000]"></div>
+            </div>
+
             <div className="flex flex-col md:gap-3 sm:gap-2 gap-2 justify-center items-center">
               <Clerk.Field
                 className="flex flex-row items-center"

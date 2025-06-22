@@ -162,6 +162,31 @@ export default function Items({
       nombre: "Filetes de cerdo",
       imagen: "filete-cerdo.webp",
     },
+    {
+      id: 32,
+      nombre: "Jamón Ibérico",
+      imagen: "jamon-iberico.webp",
+    },
+    {
+      id: 33,
+      nombre: "Mantequilla",
+      imagen: "mantequilla.webp",
+    },
+    {
+      id: 34,
+      nombre: "Manzana",
+      imagen: "manzana.webp",
+    },
+    {
+      id: 35,
+      nombre: "Melón",
+      imagen: "melon.webp",
+    },
+    {
+      id: 36,
+      nombre: "Patatas de bolsa",
+      imagen: "patatas-bolsa.webp",
+    },
   ];
 
   const productosFiltrados = productos.filter(
