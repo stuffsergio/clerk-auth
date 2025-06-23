@@ -65,3 +65,49 @@ strong,
 p {
   font-family: HelveticaNeue;
 }
+
+@keyframes border-spin {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.border-spin {
+  animation: border-spin 7s linear infinite;
+}
+
+.card-wrapper {
+}
+
+.card-wrapper::before {
+  background: conic-gradient(
+    rgba(244, 114, 182, 0.4) 0deg,
+    rgba(192, 132, 252, 0.4) 0deg,
+    transparent 100deg
+  );
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  left: -50%;
+  top: -50%;
+  content: "";
+  animation: border-spin 7s linear infinite;
+}
+
+.card-content {
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@theme {
+  --animate-rotate-border: border-rotate 3s linear infinite;
+
+  @keyframes border-rotate {
+    to {
+      --border-angle: 360deg;
+    }
+  }
+}

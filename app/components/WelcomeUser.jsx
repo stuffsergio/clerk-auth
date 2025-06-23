@@ -1,29 +1,55 @@
+"use client";
 import { UserButton, SignInButton, SignUpButton } from "@clerk/nextjs";
 import { ArrowRight, User } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function WelcomeUser() {
   return (
     <div className="">
-      <section className="h-[80vh] mb-[20vh] flex flex-col gap-8 items-center justify-center bg-[radial-gradient(circle_at_center,_#E44856_0%,_#F098A0_20%,_#FCE9EA_30%,_transparent_40%)] px-4 md:px-10 text-center">
+      <section className="relative h-[80vh] mb-[20vh] flex flex-col gap-8 items-center justify-center px-4 md:px-10 text-center">
         <div className="flex flex-col items-center md:items-start justify-center gap-5 max-w-xl">
           <div className="flex flex-col items-center md:items-start justify-center">
             <h1 className="font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
               ListShop
             </h1>
             <p className="text-black/80 text-base sm:text-lg md:text-xl font-light -translate-y-1.5 mt-2">
-              Tu <i className="text-lime-400 tracking-wide font-bold">compra</i>{" "}
-              en tu mano
+              Tu{" "}
+              <i className="text-[#0f52ba] tracking-wide font-bold">compra</i>{" "}
+              🛒 en tu mano
             </p>
           </div>
-          <div className="text-black/80 text-sm sm:text-base md:text-lg space-y-1 mt-2">
-            <p>
-              Añade tus productos a la lista de la compra con un solo click.
-            </p>
-            <p>No necesitas un boli o papel, ni siquiera pensar.</p>
+
+          <div className="md:absolute md:top-15 md:left-20 md:flex md:flex-row md:items-center md:justify-center">
+            <div className="md:flex md:flex-row md:items-center md:justify-center md:animate-rotate-border md:transition-all md:duration-500 md:ease-out md:rounded-full md:bg-conic/[from_var(--border-angle)] md:from-black md:via-green-500 md:to-black md:from-80% md:via-90% md:to-100% md:p-[1.5px]">
+              <div className="md:flex md:flex-row md:items-center md:justify-center md:gap-1 md:px-2 md:py-1 md:rounded-full md:text-white/80 md:bg-neutral-900 md:border md:border-neutral-800 md:text-center md:text-xs">
+                <img
+                  src="/icons/user-tag-02.svg"
+                  alt="User Tag"
+                  className="w-5 h-5"
+                  fill="#FFE156"
+                />
+                <p>
+                  Añade tus productos a la lista de la compra con un solo click.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="md:absolute md:bottom-15 md:right-20 md:flex md:flex-row md:items-center md:justify-center">
+            <div className="md:flex md:flex-row md:items-center md:justify-center md:animate-rotate-border md:transition-all md:duration-500 md:ease-out md:rounded-full md:bg-conic/[from_var(--border-angle)] md:from-black md:via-green-500 md:to-black md:from-80% md:via-90% md:to-100% md:p-[1.5px]">
+              <div className="md:flex md:flex-row md:items-center md:justify-center md:gap-1 md:px-2 md:py-1 md:rounded-full md:text-white/80 md:bg-neutral-900 md:border md:border-neutral-800 md:text-center md:text-xs">
+                <img
+                  src="/icons/user-tag-02.svg"
+                  alt="User Tag"
+                  className="w-5 h-5"
+                  fill="#FFE156"
+                />
+                <p>No necesitas ni boli ni papel, ni siquiera pensar.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <SignUpButton className="mt-6 cursor-pointer hover:scale-105 hover:-translate-y-0.5 transform transition-all shadow-blue-400/80 shadow-lg rounded-full px-6 py-2 tracking-wide text-lg sm:text-xl font-bold bg-blue-600 text-white">
+        <SignUpButton className="mt-0 cursor-pointer hover:scale-105 hover:-translate-y-0.5 transform transition-all shadow-blue-400/80 shadow-lg rounded-full px-6 py-2 tracking-wide text-lg sm:text-xl font-bold bg-blue-600 text-white">
           <h3>Empezar</h3>
         </SignUpButton>
       </section>
